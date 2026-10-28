@@ -1,0 +1,32 @@
+# Isolated, Docker-only verification stack: requires no host Java/Maven installation.
+# The test database has a dedicated name; PostgresTestBase refuses any other target.
+services:
+  db_test:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: motoservice_test
+      POSTGRES_USER: motoservice
+      POSTGRES_PASSWORD: local-demo-only
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U motoservice -d motoservice_test"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  verify:
+    image: maven:3.9.11-eclipse-temurin-21
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+      - motoservice_maven_cache:/root/.m2
+    environment:
+      TEST_DB_URL: jdbc:postgresql://db_test:5432/motoservice_test
+      TEST_DB_USER: motoservice
+      TEST_DB_PASSWORD: local-demo-only
+    depends_on:
+      db_test:
+        condition: service_healthy
+    command: ["mvn", "-B", "-ntp", "clean", "verify"]
+volumes:
+  motoservice_maven_cache:

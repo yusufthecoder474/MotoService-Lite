@@ -1,0 +1,10 @@
+target/
+.env
+.idea/
+.vscode/
+*.log
+.DS_Store
+artifacts/*.log
+artifacts/*.json
+artifacts/*.txt
+artifacts/evaluation-results.md

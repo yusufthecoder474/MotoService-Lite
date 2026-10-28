@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/motoservice}
+    username: ${DB_USER:motoservice}
+    password: ${DB_PASSWORD:local-demo-only}
+    hikari:
+      maximum-pool-size: 16
+      connection-init-sql: SET lock_timeout = '15s'
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  error:
+    include-message: never
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+app:
+  demo: ${DEMO_ENABLED:true}

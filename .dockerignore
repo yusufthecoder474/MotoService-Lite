@@ -1,0 +1,5 @@
+.git
+.env
+screenshots
+target/*
+!target/motoservice-lite-1.0.0.jar

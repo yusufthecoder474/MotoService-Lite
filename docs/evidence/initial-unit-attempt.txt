@@ -1,0 +1,13 @@
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.148 s -- in com.motoservice.BookingRulesTest
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.312 s <<< FAILURE! -- in com.motoservice.WorkshopServiceTest
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process - set a property net.bytebuddy.agent.attacher.dump to dump the process output to a file at the specified location
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process - set a property net.bytebuddy.agent.attacher.dump to dump the process output to a file at the specified location
+Caused by: org.mockito.exceptions.base.MockitoInitializationException: 
+Caused by: java.lang.IllegalStateException: Could not self-attach to current VM using external process - set a property net.bytebuddy.agent.attacher.dump to dump the process output to a file at the specified location
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.227 s -- in com.motoservice.ValidationTest
+[ERROR] Tests run: 20, Failures: 0, Errors: 3, Skipped: 0
+[INFO] BUILD FAILURE
