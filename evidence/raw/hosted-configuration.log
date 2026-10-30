@@ -1,0 +1,173 @@
+﻿2026-10-30T04:22:33.6001037Z Current runner version: '2.338.0'
+2026-10-30T04:22:33.6022496Z ##[group]Runner Image Provisioner
+2026-10-30T04:22:33.6023211Z Hosted Compute Agent
+2026-10-30T04:22:33.6023690Z Version: 20261021.618
+2026-10-30T04:22:33.6024352Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T04:22:33.6024959Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T04:22:33.6025599Z Worker ID: {3207e4ca-e7ae-4760-8656-0f8f123b7cfc}
+2026-10-30T04:22:33.6026330Z Region: westus3
+2026-10-30T04:22:33.6026793Z Cloud: Azure
+2026-10-30T04:22:33.6027311Z ##[endgroup]
+2026-10-30T04:22:33.6028684Z ##[group]Operating System
+2026-10-30T04:22:33.6029298Z Ubuntu
+2026-10-30T04:22:33.6029765Z 24.04.5
+2026-10-30T04:22:33.6030212Z LTS
+2026-10-30T04:22:33.6030748Z ##[endgroup]
+2026-10-30T04:22:33.6031222Z ##[group]Runner Image
+2026-10-30T04:22:33.6031775Z Image: ubuntu-24.04
+2026-10-30T04:22:33.6032278Z Version: 20261025.353.1
+2026-10-30T04:22:33.6033348Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T04:22:33.6034648Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T04:22:33.6035492Z ##[endgroup]
+2026-10-30T04:22:33.6036595Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T04:22:33.6038218Z Contents: read
+2026-10-30T04:22:33.6038741Z Metadata: read
+2026-10-30T04:22:33.6039251Z ##[endgroup]
+2026-10-30T04:22:33.6041004Z Secret source: Actions
+2026-10-30T04:22:33.6041814Z Cache mode: write
+2026-10-30T04:22:33.6042468Z Prepare workflow directory
+2026-10-30T04:22:33.6310527Z Prepare all required actions
+2026-10-30T04:22:33.6364066Z Getting action download info
+2026-10-30T04:22:33.9074667Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-30T04:22:34.0703009Z Complete job name: configuration
+2026-10-30T04:22:34.1452876Z ##[group]Run actions/checkout@v4
+2026-10-30T04:22:34.1453535Z with:
+2026-10-30T04:22:34.1453913Z   ref: 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:22:34.1454446Z   repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:22:34.1457924Z   token: ***
+2026-10-30T04:22:34.1458281Z   ssh-strict: true
+2026-10-30T04:22:34.1458644Z   ssh-user: git
+2026-10-30T04:22:34.1459002Z   persist-credentials: true
+2026-10-30T04:22:34.1459390Z   clean: true
+2026-10-30T04:22:34.1459757Z   sparse-checkout-cone-mode: true
+2026-10-30T04:22:34.1460185Z   fetch-depth: 1
+2026-10-30T04:22:34.1460530Z   fetch-tags: false
+2026-10-30T04:22:34.1460897Z   show-progress: true
+2026-10-30T04:22:34.1461257Z   lfs: false
+2026-10-30T04:22:34.1461593Z   submodules: false
+2026-10-30T04:22:34.1461956Z   set-safe-directory: true
+2026-10-30T04:22:34.1462359Z   allow-unsafe-pr-checkout: false
+2026-10-30T04:22:34.1462946Z ##[endgroup]
+2026-10-30T04:22:34.3631966Z Syncing repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:22:34.3634018Z ##[group]Getting Git version info
+2026-10-30T04:22:34.3634983Z Working directory is '/home/runner/work/MotoService-Lite/MotoService-Lite'
+2026-10-30T04:22:34.3636566Z [command]/usr/bin/git version
+2026-10-30T04:22:34.3685767Z git version 2.56.0
+2026-10-30T04:22:34.3701946Z ##[endgroup]
+2026-10-30T04:22:34.3714195Z Temporarily overriding HOME='/home/runner/work/_temp/b38d95cc-f4c7-4ac5-a7f2-b6d47a6810b2' before making global git config changes
+2026-10-30T04:22:34.3716022Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T04:22:34.3718362Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:22:34.3760583Z Deleting the contents of '/home/runner/work/MotoService-Lite/MotoService-Lite'
+2026-10-30T04:22:34.3763761Z ##[group]Initializing the repository
+2026-10-30T04:22:34.3766990Z [command]/usr/bin/git init /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:22:34.3856030Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T04:22:34.3857536Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T04:22:34.3858992Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T04:22:34.3859874Z hint: call:
+2026-10-30T04:22:34.3860379Z hint:
+2026-10-30T04:22:34.3860993Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T04:22:34.3861738Z hint:
+2026-10-30T04:22:34.3862444Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T04:22:34.3863600Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T04:22:34.3864520Z hint:
+2026-10-30T04:22:34.3865019Z hint: 	git branch -m <name>
+2026-10-30T04:22:34.3865586Z hint:
+2026-10-30T04:22:34.3866499Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T04:22:34.3877547Z Initialized empty Git repository in /home/runner/work/MotoService-Lite/MotoService-Lite/.git/
+2026-10-30T04:22:34.3886370Z [command]/usr/bin/git remote add origin https://github.com/yusufthecoder474/MotoService-Lite
+2026-10-30T04:22:34.3998659Z ##[endgroup]
+2026-10-30T04:22:34.3999621Z ##[group]Disabling automatic garbage collection
+2026-10-30T04:22:34.4002842Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T04:22:34.4039010Z ##[endgroup]
+2026-10-30T04:22:34.4039928Z ##[group]Setting up auth
+2026-10-30T04:22:34.4040796Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T04:22:34.4072151Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T04:22:34.4392375Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T04:22:34.4430352Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T04:22:34.4636144Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T04:22:34.4673079Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T04:22:34.4881836Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T04:22:34.4924985Z ##[endgroup]
+2026-10-30T04:22:34.4925672Z ##[group]Fetching the repository
+2026-10-30T04:22:34.4934736Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:22:35.1466741Z From https://github.com/yusufthecoder474/MotoService-Lite
+2026-10-30T04:22:35.1467806Z  * branch            414d06c743961f943513c41633255ad0c6ea34df -> FETCH_HEAD
+2026-10-30T04:22:35.1470673Z ##[endgroup]
+2026-10-30T04:22:35.1471718Z ##[group]Determining the checkout info
+2026-10-30T04:22:35.1472947Z ##[endgroup]
+2026-10-30T04:22:35.1477904Z [command]/usr/bin/git sparse-checkout disable
+2026-10-30T04:22:35.2677244Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-30T04:22:35.2722039Z ##[group]Checking out the ref
+2026-10-30T04:22:35.2724491Z [command]/usr/bin/git checkout --progress --force 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:22:35.2837598Z Note: switching to '414d06c743961f943513c41633255ad0c6ea34df'.
+2026-10-30T04:22:35.2838898Z 
+2026-10-30T04:22:35.2839704Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-30T04:22:35.2841612Z changes and commit them, and you can discard any commits you make in this
+2026-10-30T04:22:35.2843514Z state without impacting any branches by switching back to a branch.
+2026-10-30T04:22:35.2844309Z 
+2026-10-30T04:22:35.2844925Z If you want to create a new branch to retain commits you create, you may
+2026-10-30T04:22:35.2846802Z do so (now or later) by using -c with the switch command. Example:
+2026-10-30T04:22:35.2847859Z 
+2026-10-30T04:22:35.2848662Z   git switch -c <new-branch-name>
+2026-10-30T04:22:35.2849455Z 
+2026-10-30T04:22:35.2849908Z Or undo this operation with:
+2026-10-30T04:22:35.2850522Z 
+2026-10-30T04:22:35.2850919Z   git switch -
+2026-10-30T04:22:35.2851400Z 
+2026-10-30T04:22:35.2852146Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-30T04:22:35.2853205Z 
+2026-10-30T04:22:35.2853914Z HEAD is now at 414d06c Validate PowerShell wrapper syntax in platform CI
+2026-10-30T04:22:35.2857359Z ##[endgroup]
+2026-10-30T04:22:35.2887350Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T04:22:35.2915463Z 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:22:35.3958114Z ##[group]Run pip install PyYAML==6.0.2
+2026-10-30T04:22:35.3959328Z [36;1mpip install PyYAML==6.0.2[0m
+2026-10-30T04:22:35.3981069Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:22:35.3982004Z ##[endgroup]
+2026-10-30T04:22:36.4857524Z Defaulting to user installation because normal site-packages is not writeable
+2026-10-30T04:22:37.0015300Z Collecting PyYAML==6.0.2
+2026-10-30T04:22:37.0363211Z   Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+2026-10-30T04:22:37.0428987Z Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+2026-10-30T04:22:37.0727025Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.5/767.5 kB 27.2 MB/s eta 0:00:00
+2026-10-30T04:22:37.2978422Z Installing collected packages: PyYAML
+2026-10-30T04:22:37.3414623Z Successfully installed PyYAML-6.0.2
+2026-10-30T04:22:37.3974490Z ##[group]Run python3 scripts/validate-platform.py
+2026-10-30T04:22:37.3974886Z [36;1mpython3 scripts/validate-platform.py[0m
+2026-10-30T04:22:37.3993736Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:22:37.3994009Z ##[endgroup]
+2026-10-30T04:22:37.4692370Z PASS: YAML, probe/security invariants, and limited credential-pattern scan
+2026-10-30T04:22:37.4780867Z ##[group]Run Get-ChildItem scripts/*.ps1 | ForEach-Object {
+2026-10-30T04:22:37.4781291Z [36;1mGet-ChildItem scripts/*.ps1 | ForEach-Object {[0m
+2026-10-30T04:22:37.4781640Z [36;1m  $tokens = $null[0m
+2026-10-30T04:22:37.4781895Z [36;1m  $parseErrors = $null[0m
+2026-10-30T04:22:37.4782366Z [36;1m  [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$parseErrors) | Out-Null[0m
+2026-10-30T04:22:37.4783004Z [36;1m  if ($parseErrors.Count -gt 0) { throw ($parseErrors | Out-String) }[0m
+2026-10-30T04:22:37.4783343Z [36;1m}[0m
+2026-10-30T04:22:37.4805471Z shell: /usr/bin/pwsh -command ". '{0}'"
+2026-10-30T04:22:37.4805756Z ##[endgroup]
+2026-10-30T04:22:38.7838575Z ##[group]Run curl -fsSL https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz | tar xz kubeconform
+2026-10-30T04:22:38.7839344Z [36;1mcurl -fsSL https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz | tar xz kubeconform[0m
+2026-10-30T04:22:38.7840187Z [36;1m./kubeconform -strict -summary -kubernetes-version 1.32.0 deploy/k8s/app.yaml deploy/k8s/postgres.yaml deploy/k8s/configmap.yaml deploy/k8s/namespace.yaml deploy/k8s/secret.example.yaml[0m
+2026-10-30T04:22:38.7857774Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:22:38.7857997Z ##[endgroup]
+2026-10-30T04:22:39.4556872Z Summary: 7 resources found in 5 files - Valid: 7, Invalid: 0, Errors: 0, Skipped: 0
+2026-10-30T04:22:39.4610921Z ##[group]Run bash -n scripts/kind-up.sh scripts/kind-verify.sh scripts/kind-down.sh scripts/platform-verify.sh
+2026-10-30T04:22:39.4611549Z [36;1mbash -n scripts/kind-up.sh scripts/kind-verify.sh scripts/kind-down.sh scripts/platform-verify.sh[0m
+2026-10-30T04:22:39.4628975Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:22:39.4629202Z ##[endgroup]
+2026-10-30T04:22:39.4810719Z Post job cleanup.
+2026-10-30T04:22:39.5535898Z [command]/usr/bin/git version
+2026-10-30T04:22:39.5574452Z git version 2.56.0
+2026-10-30T04:22:39.5606491Z Temporarily overriding HOME='/home/runner/work/_temp/e33ceee5-320b-4504-ac8c-be72a5ed30d6' before making global git config changes
+2026-10-30T04:22:39.5607795Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T04:22:39.5611088Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:22:39.5649867Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T04:22:39.5690388Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T04:22:39.5931295Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T04:22:39.5967343Z http.https://github.com/.extraheader
+2026-10-30T04:22:39.5975826Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-30T04:22:39.6017760Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T04:22:39.6281331Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T04:22:39.6321385Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T04:22:39.6675215Z Cleaning up orphan processes
+2026-10-30T04:22:39.7013953Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

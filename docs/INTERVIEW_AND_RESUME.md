@@ -4,9 +4,9 @@
 
 Use only the verification ledger's current measurements; do not describe Azure as deployed while it is pending.
 
-- Preserved booking correctness across 65 original regression tests by extending a Java 21/Spring Boot/PostgreSQL service with guarded cloud configuration and status-only health probes; final automated pass count: **[FILL IN from final ledger]**.
-- Made application recovery repeatable, measured by **[FILL IN verified restart/persistence runs]**, by adding isolated Docker Compose and local kind workflows that verify booking, FIFO promotion and persisted history after app replacement.
-- Made cloud changes reviewable through a four-resource Terraform configuration and gated GitHub OIDC workflow, measured by **[FILL IN successful static/hosted checks]**, while documenting cost approval, Key Vault secrets, TLS, rollback and cleanup.
+- Preserved booking behavior across **74 passing automated tests** (65 existing, nine added) by extending a Java 21/Spring Boot/PostgreSQL service with secure health probes and guarded cloud configuration.
+- Verified recovery in **two isolated runtime demonstrations** by implementing Docker Compose and local kind workflows that check booking, FIFO promotion and completed history after application restart/replacement.
+- Made a **four-resource Azure configuration** reviewable through Terraform formatting/validation and **five passing CI jobs**, while adding a manual OIDC release gate and documenting Key Vault, TLS and cost approval; Azure deployment remains pending.
 
 Availability (user-provided): **1 Nov 2026–May 2027; open to relocation**. These dates are availability, not employment history. Replace placeholders only with actual logs; no claimed uptime, cost savings or production users.
 

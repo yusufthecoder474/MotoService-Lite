@@ -1,0 +1,18 @@
+UTC 2026-10-30T04:23:16.276939+00:00
+Platform Linux amd64; code SHA 414d06c743961f943513c41633255ad0c6ea34df
+COMMAND: ../cloud-tools/terraform -chdir=infra/terraform fmt -check -recursive
+
+EXIT: 0
+COMMAND: python3 scripts/validate-platform.py
+PASS: YAML, probe/security invariants, and limited credential-pattern scan
+
+EXIT: 0
+COMMAND: bash -n scripts/kind-up.sh scripts/kind-verify.sh scripts/kind-down.sh scripts/platform-verify.sh
+
+EXIT: 0
+COMMAND: ../cloud-tools/actionlint -shellcheck= -pyflakes= .github/workflows/ci.yml .github/workflows/deploy-azure.yml
+
+EXIT: 0
+COMMAND: git diff --exit-code 631c5f4 -- RUN_ALL.cmd compose.verify.yaml compose.yaml screenshots/01-login.png screenshots/02-customer-dashboard.png screenshots/03-service-slots.png screenshots/04-waitlist-promotion.png screenshots/05-advisor-dashboard.png screenshots/06-tests-passed.png screenshots/07-completed-service.png screenshots/README.md scripts/automation/RUN_ALL.ps1 scripts/automation/smoke_http.ps1 scripts/automation/smoke_http.py src/main/java/com/motoservice/controller/ApiController.java src/main/java/com/motoservice/controller/ApiErrors.java src/main/java/com/motoservice/controller/WebController.java src/main/java/com/motoservice/entity/AppUser.java src/main/java/com/motoservice/entity/Booking.java src/main/java/com/motoservice/entity/BookingEvent.java src/main/java/com/motoservice/entity/BookingStatus.java src/main/java/com/motoservice/entity/Motorcycle.java src/main/java/com/motoservice/entity/Role.java src/main/java/com/motoservice/entity/ServiceCenter.java src/main/java/com/motoservice/entity/ServiceSlot.java src/main/java/com/motoservice/entity/ServiceType.java src/main/java/com/motoservice/entity/WaitlistEntry.java src/main/java/com/motoservice/entity/WaitlistStatus.java src/main/java/com/motoservice/repository/BookingRepository.java src/main/java/com/motoservice/repository/CenterRepository.java src/main/java/com/motoservice/repository/EventRepository.java src/main/java/com/motoservice/repository/MotorcycleRepository.java src/main/java/com/motoservice/repository/SlotRepository.java src/main/java/com/motoservice/repository/UserRepository.java src/main/java/com/motoservice/repository/WaitlistRepository.java src/main/java/com/motoservice/service/BookingRules.java src/main/java/com/motoservice/service/WorkshopService.java src/main/resources/db/migration/V1__schema.sql src/test/java/com/motoservice/ApiContractTest.java src/test/java/com/motoservice/BookingIT.java src/test/java/com/motoservice/BookingRulesTest.java src/test/java/com/motoservice/ConcurrencyIT.java src/test/java/com/motoservice/ConcurrentRunner.java src/test/java/com/motoservice/EvaluationIT.java src/test/java/com/motoservice/PostgresTestBase.java src/test/java/com/motoservice/SecurityIT.java src/test/java/com/motoservice/ValidationTest.java src/test/java/com/motoservice/WebRenderingTest.java src/test/java/com/motoservice/WorkshopServiceTest.java src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker
+
+EXIT: 0

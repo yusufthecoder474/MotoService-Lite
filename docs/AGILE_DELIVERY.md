@@ -12,7 +12,7 @@ This is a solo student portfolio iteration, not professional Scrum-team experien
 | S6: Gate cloud release safely | Manual OIDC update, private accounts, TLS, cost/network review and confirmed cleanup | P2 |
 | S7: Explain design and evidence | LLD, ADR, Windows guide, review notes, claim-by-claim ledger and interview notes | P2 |
 
-Iteration board: implementation/review covers S1–S7; runtime acceptance is tracked separately in the evidence ledger. Cloud provisioning remains blocked by subscription/cost/network approval, not counted as delivered deployment. Do not mark a runtime story Done merely because its YAML exists.
+Iteration board: S1–S5 and S7 are implemented and verified within the recorded local/hosted scope. S6's deployment path is implemented and statically checked; real Azure execution remains blocked. Runtime acceptance is tracked in the evidence ledger. Cloud provisioning remains blocked by subscription/cost/network approval, not counted as delivered deployment. Do not mark a runtime story Done merely because its YAML exists.
 
 Definition of done: implementation reviewed for preserved behavior; meaningful tests pass in the available runtime or a precise blocker is recorded; secrets absent from public artifacts; docs match actual commands and limitations; evidence includes source SHA, date, command, platform and raw log; unexecuted work explicitly labeled. Cloud deployment additionally needs successful authentication, DB/TLS, health and synthetic workflow plus cleanup inventory.
 
@@ -30,14 +30,17 @@ Definition of done: implementation reviewed for preserved behavior; meaningful t
 
 ## PR review checklist
 
-- [ ] Original 65 tests remain; final test counts derived once from reports.
-- [ ] No modifications to booking transactions, original migrations, original Windows launcher or screenshots.
-- [ ] Probe access is GET-only, status-only; all other Actuator routes denied; CSRF retained.
-- [ ] Cloud cannot seed/use known demo identities; secret values are absent from Git/Terraform inputs.
-- [ ] DB verified TLS, network prerequisites and least privilege are documented.
-- [ ] JAR verified before image build; non-root user and SHA source tag recorded.
-- [ ] Kubernetes namespace/context/loopback explicit; DB persistence limitation clear.
-- [ ] Terraform validation and runtime CI outcomes linked; no unapproved cloud side effects.
-- [ ] Cleanup requires exact dedicated scope; review artifacts contain no credentials/state.
+- [x] Original 65 tests remain; final test counts derived once from reports.
+- [x] No modifications to booking transactions, original migrations, original Windows launcher or screenshots.
+- [x] Probe access is GET-only, status-only; all other Actuator routes denied; CSRF retained.
+- [x] Cloud cannot seed/use known demo identities; secret values are absent from Git/Terraform inputs.
+- [x] DB verified TLS, network prerequisites and least privilege are documented.
+- [x] JAR verified before image build; non-root user and SHA source tag recorded.
+- [x] Kubernetes namespace/context/loopback explicit; DB persistence limitation clear.
+- [x] Terraform validation and runtime CI outcomes linked; no unapproved cloud side effects.
+- [x] Cleanup requires exact dedicated scope; review artifacts contain no credentials/state.
 
 Self-review: app/controller/service/schema preservation checked with Git diff; config invariants and focused credential-pattern scan implemented; cloud threat boundaries and manual release caveats documented. This is not an independent security audit or a teammate approval. Base image digest pinning, full secret/history scanning, SBOM and vulnerability scanning remain future work.
+
+
+Tracking: [issue #1](https://github.com/yusufthecoder474/MotoService-Lite/issues/1), [draft PR #2](https://github.com/yusufthecoder474/MotoService-Lite/pull/2). The checked list records self-review and observed checks, not external reviewer approval. The PR remains unmerged for review.

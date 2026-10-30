@@ -1,0 +1,357 @@
+﻿2026-10-30T04:23:43.5895713Z Current runner version: '2.338.0'
+2026-10-30T04:23:43.5918647Z ##[group]Runner Image Provisioner
+2026-10-30T04:23:43.5919464Z Hosted Compute Agent
+2026-10-30T04:23:43.5920245Z Version: 20261021.618
+2026-10-30T04:23:43.5920762Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T04:23:43.5921430Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T04:23:43.5921992Z Worker ID: {255154fe-09f7-4442-bbf2-1d478ea82776}
+2026-10-30T04:23:43.5922618Z Region: westus3
+2026-10-30T04:23:43.5923100Z Cloud: Azure
+2026-10-30T04:23:43.5923562Z ##[endgroup]
+2026-10-30T04:23:43.5924991Z ##[group]Operating System
+2026-10-30T04:23:43.5925530Z Ubuntu
+2026-10-30T04:23:43.5925994Z 24.04.5
+2026-10-30T04:23:43.5926550Z LTS
+2026-10-30T04:23:43.5926986Z ##[endgroup]
+2026-10-30T04:23:43.5927495Z ##[group]Runner Image
+2026-10-30T04:23:43.5928012Z Image: ubuntu-24.04
+2026-10-30T04:23:43.5928506Z Version: 20261025.353.1
+2026-10-30T04:23:43.5929640Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T04:23:43.5931043Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T04:23:43.5931843Z ##[endgroup]
+2026-10-30T04:23:43.5932853Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T04:23:43.5934384Z Contents: read
+2026-10-30T04:23:43.5934870Z Metadata: read
+2026-10-30T04:23:43.5935441Z ##[endgroup]
+2026-10-30T04:23:43.5937161Z Secret source: Actions
+2026-10-30T04:23:43.5938041Z Cache mode: write
+2026-10-30T04:23:43.5938620Z Prepare workflow directory
+2026-10-30T04:23:43.6213838Z Prepare all required actions
+2026-10-30T04:23:43.6253748Z Getting action download info
+2026-10-30T04:23:43.9176213Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-30T04:23:44.0764912Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-30T04:23:44.8558558Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-30T04:23:45.0968265Z Complete job name: kind
+2026-10-30T04:23:45.1795066Z ##[group]Run actions/checkout@v4
+2026-10-30T04:23:45.1796591Z with:
+2026-10-30T04:23:45.1797423Z   ref: 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:23:45.1798672Z   repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:23:45.1806432Z   token: ***
+2026-10-30T04:23:45.1807109Z   ssh-strict: true
+2026-10-30T04:23:45.1807762Z   ssh-user: git
+2026-10-30T04:23:45.1808473Z   persist-credentials: true
+2026-10-30T04:23:45.1809199Z   clean: true
+2026-10-30T04:23:45.1809861Z   sparse-checkout-cone-mode: true
+2026-10-30T04:23:45.1810937Z   fetch-depth: 1
+2026-10-30T04:23:45.1811591Z   fetch-tags: false
+2026-10-30T04:23:45.1812270Z   show-progress: true
+2026-10-30T04:23:45.1812952Z   lfs: false
+2026-10-30T04:23:45.1813569Z   submodules: false
+2026-10-30T04:23:45.1814248Z   set-safe-directory: true
+2026-10-30T04:23:45.1815014Z   allow-unsafe-pr-checkout: false
+2026-10-30T04:23:45.1816153Z ##[endgroup]
+2026-10-30T04:23:45.5911798Z Syncing repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:23:45.5914187Z ##[group]Getting Git version info
+2026-10-30T04:23:45.5915396Z Working directory is '/home/runner/work/MotoService-Lite/MotoService-Lite'
+2026-10-30T04:23:45.5954257Z [command]/usr/bin/git version
+2026-10-30T04:23:45.6052272Z git version 2.56.0
+2026-10-30T04:23:45.6069703Z ##[endgroup]
+2026-10-30T04:23:45.6084574Z Temporarily overriding HOME='/home/runner/work/_temp/08e0ed87-0ab0-422f-8c30-00c31a44523a' before making global git config changes
+2026-10-30T04:23:45.6087813Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T04:23:45.6090852Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:23:45.6141668Z Deleting the contents of '/home/runner/work/MotoService-Lite/MotoService-Lite'
+2026-10-30T04:23:45.6151022Z ##[group]Initializing the repository
+2026-10-30T04:23:45.6164328Z [command]/usr/bin/git init /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:23:45.6230342Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T04:23:45.6232634Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T04:23:45.6234371Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T04:23:45.6235684Z hint: call:
+2026-10-30T04:23:45.6236686Z hint:
+2026-10-30T04:23:45.6238004Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T04:23:45.6239578Z hint:
+2026-10-30T04:23:45.6241256Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T04:23:45.6243617Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T04:23:45.6245494Z hint:
+2026-10-30T04:23:45.6246556Z hint: 	git branch -m <name>
+2026-10-30T04:23:45.6247789Z hint:
+2026-10-30T04:23:45.6249443Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T04:23:45.6252548Z Initialized empty Git repository in /home/runner/work/MotoService-Lite/MotoService-Lite/.git/
+2026-10-30T04:23:45.6257241Z [command]/usr/bin/git remote add origin https://github.com/yusufthecoder474/MotoService-Lite
+2026-10-30T04:23:45.6301209Z ##[endgroup]
+2026-10-30T04:23:45.6303334Z ##[group]Disabling automatic garbage collection
+2026-10-30T04:23:45.6311357Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T04:23:45.6368956Z ##[endgroup]
+2026-10-30T04:23:45.6370771Z ##[group]Setting up auth
+2026-10-30T04:23:45.6372419Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T04:23:45.6415209Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T04:23:45.6829262Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T04:23:45.6874632Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T04:23:45.7086089Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T04:23:45.7125547Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T04:23:45.7341174Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T04:23:45.7386583Z ##[endgroup]
+2026-10-30T04:23:45.7396380Z ##[group]Fetching the repository
+2026-10-30T04:23:45.7398490Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:23:46.4322407Z From https://github.com/yusufthecoder474/MotoService-Lite
+2026-10-30T04:23:46.4324783Z  * branch            414d06c743961f943513c41633255ad0c6ea34df -> FETCH_HEAD
+2026-10-30T04:23:46.4328022Z ##[endgroup]
+2026-10-30T04:23:46.4328683Z ##[group]Determining the checkout info
+2026-10-30T04:23:46.4329344Z ##[endgroup]
+2026-10-30T04:23:46.4329774Z [command]/usr/bin/git sparse-checkout disable
+2026-10-30T04:23:46.4374048Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-30T04:23:46.4415133Z ##[group]Checking out the ref
+2026-10-30T04:23:46.4417642Z [command]/usr/bin/git checkout --progress --force 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:23:46.4528306Z Note: switching to '414d06c743961f943513c41633255ad0c6ea34df'.
+2026-10-30T04:23:46.4528824Z 
+2026-10-30T04:23:46.4529194Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-30T04:23:46.4530290Z changes and commit them, and you can discard any commits you make in this
+2026-10-30T04:23:46.4531253Z state without impacting any branches by switching back to a branch.
+2026-10-30T04:23:46.4532087Z 
+2026-10-30T04:23:46.4532525Z If you want to create a new branch to retain commits you create, you may
+2026-10-30T04:23:46.4533496Z do so (now or later) by using -c with the switch command. Example:
+2026-10-30T04:23:46.4534004Z 
+2026-10-30T04:23:46.4604729Z   git switch -c <new-branch-name>
+2026-10-30T04:23:46.4605217Z 
+2026-10-30T04:23:46.4605493Z Or undo this operation with:
+2026-10-30T04:23:46.4605904Z 
+2026-10-30T04:23:46.4606149Z   git switch -
+2026-10-30T04:23:46.4606425Z 
+2026-10-30T04:23:46.4606759Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-30T04:23:46.4607188Z 
+2026-10-30T04:23:46.4607501Z HEAD is now at 414d06c Validate PowerShell wrapper syntax in platform CI
+2026-10-30T04:23:46.4609476Z ##[endgroup]
+2026-10-30T04:23:46.4610939Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T04:23:46.4611653Z 414d06c743961f943513c41633255ad0c6ea34df
+2026-10-30T04:23:46.5902686Z ##[group]Run actions/download-artifact@v4
+2026-10-30T04:23:46.5903124Z with:
+2026-10-30T04:23:46.5903480Z   name: verified-jar
+2026-10-30T04:23:46.5903827Z   path: target
+2026-10-30T04:23:46.5904169Z   merge-multiple: false
+2026-10-30T04:23:46.5904589Z   repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:23:46.5905024Z   run-id: 41002535727
+2026-10-30T04:23:46.5905372Z ##[endgroup]
+2026-10-30T04:23:46.8702290Z Downloading single artifact
+2026-10-30T04:23:47.0771087Z (node:2187) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-30T04:23:47.0771786Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T04:23:47.5662781Z Preparing to download the following artifacts:
+2026-10-30T04:23:47.5671221Z - verified-jar (ID: 12953443782, Size: 56284769, Expected Digest: sha256:c64e15cb4c4fe9364276f5891db5cca3b0901d8c70f27b4ec4d750da7d9354d7)
+2026-10-30T04:23:48.1748395Z Redirecting to blob download url: https://productionresultssa0.blob.core.windows.net/actions-results/773e1dd9-4d1e-8713-be4e-207dfb020554/workflow-job-run-51e4f02e-1a29-598f-8348-f37e07bce81d/artifacts/4897e2d2af78858af38a8971b5a58c1bbf0ab81fb4dd99b6096e2a9f4a70fc3c.zip
+2026-10-30T04:23:48.1750429Z Starting download of artifact to: /home/runner/work/MotoService-Lite/MotoService-Lite/target
+2026-10-30T04:23:48.4379376Z (node:2187) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-30T04:23:50.5322379Z SHA256 digest of downloaded artifact is c64e15cb4c4fe9364276f5891db5cca3b0901d8c70f27b4ec4d750da7d9354d7
+2026-10-30T04:23:50.5335792Z Artifact download completed successfully.
+2026-10-30T04:23:50.5338120Z Total of 1 artifact(s) downloaded
+2026-10-30T04:23:50.5339033Z Download artifact has finished successfully
+2026-10-30T04:23:50.5505446Z ##[group]Run curl -fsSL https://kind.sigs.k8s.io/dl/v0.33.0/kind-linux-amd64 -o kind
+2026-10-30T04:23:50.5506021Z [36;1mcurl -fsSL https://kind.sigs.k8s.io/dl/v0.33.0/kind-linux-amd64 -o kind[0m
+2026-10-30T04:23:50.5506420Z [36;1mchmod +x kind[0m
+2026-10-30T04:23:50.5506664Z [36;1msudo mv kind /usr/local/bin/kind[0m
+2026-10-30T04:23:50.5527414Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:23:50.5527675Z ##[endgroup]
+2026-10-30T04:23:51.0082193Z ##[group]Run bash scripts/kind-up.sh
+2026-10-30T04:23:51.0082491Z [36;1mbash scripts/kind-up.sh[0m
+2026-10-30T04:23:51.0100115Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:23:51.0100356Z ##[endgroup]
+2026-10-30T04:23:51.0941207Z No kind clusters found.
+2026-10-30T04:23:54.1218296Z Creating cluster "motoservice-local" ...
+2026-10-30T04:23:54.1219214Z  • Ensuring node image (kindest/node:v1.37.0) 🖼️  ...
+2026-10-30T04:24:04.8008605Z  ✓ Ensuring node image (kindest/node:v1.37.0) 🖼️
+2026-10-30T04:24:04.8010660Z  • Preparing nodes 📦   ...
+2026-10-30T04:24:07.9697951Z  ✓ Preparing nodes 📦 
+2026-10-30T04:24:07.9966393Z  • Writing configuration 📜  ...
+2026-10-30T04:24:08.1794986Z  ✓ Writing configuration 📜
+2026-10-30T04:24:08.1796156Z  • Starting control-plane 🕹️  ...
+2026-10-30T04:24:15.5386833Z  ✓ Starting control-plane 🕹️
+2026-10-30T04:24:15.5387649Z  • Installing CNI 🔌  ...
+2026-10-30T04:24:15.8115389Z  ✓ Installing CNI 🔌
+2026-10-30T04:24:15.8115945Z  • Installing StorageClass 💾  ...
+2026-10-30T04:24:16.1392479Z  ✓ Installing StorageClass 💾
+2026-10-30T04:24:16.3001208Z Set kubectl context to "kind-motoservice-local"
+2026-10-30T04:24:16.3009073Z You can now use your cluster with:
+2026-10-30T04:24:16.3009303Z 
+2026-10-30T04:24:16.3009503Z kubectl cluster-info --context kind-motoservice-local
+2026-10-30T04:24:16.3009793Z 
+2026-10-30T04:24:16.3010383Z Have a nice day! 👋
+2026-10-30T04:24:16.7818765Z #0 building with "default" instance using docker driver
+2026-10-30T04:24:16.7819343Z 
+2026-10-30T04:24:16.7819662Z #1 [internal] load build definition from Dockerfile
+2026-10-30T04:24:16.7820438Z #1 transferring dockerfile: 642B 0.1s done
+2026-10-30T04:24:16.9370613Z #1 DONE 0.1s
+2026-10-30T04:24:16.9370780Z 
+2026-10-30T04:24:16.9371017Z #2 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre
+2026-10-30T04:24:17.1099199Z #2 ...
+2026-10-30T04:24:17.1099414Z 
+2026-10-30T04:24:17.1099646Z #3 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+2026-10-30T04:24:17.1100153Z #3 DONE 0.0s
+2026-10-30T04:24:17.2601062Z 
+2026-10-30T04:24:17.2601733Z #2 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre
+2026-10-30T04:24:17.5509603Z #2 DONE 0.8s
+2026-10-30T04:24:17.6710755Z 
+2026-10-30T04:24:17.6711802Z #4 [internal] load .dockerignore
+2026-10-30T04:24:17.6712261Z #4 transferring context: 108B done
+2026-10-30T04:24:17.6712598Z #4 DONE 0.0s
+2026-10-30T04:24:17.6712737Z 
+2026-10-30T04:24:17.6713301Z #5 [1/4] FROM docker.io/library/eclipse-temurin:21-jre@sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a
+2026-10-30T04:24:17.6714443Z #5 resolve docker.io/library/eclipse-temurin:21-jre@sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a done
+2026-10-30T04:24:17.7775155Z #5 ...
+2026-10-30T04:24:17.7775373Z 
+2026-10-30T04:24:17.7775561Z #6 [internal] load build context
+2026-10-30T04:24:17.7775931Z #6 transferring context: 63.06MB 0.2s done
+2026-10-30T04:24:17.7776276Z #6 DONE 0.2s
+2026-10-30T04:24:17.7776420Z 
+2026-10-30T04:24:17.7776960Z #5 [1/4] FROM docker.io/library/eclipse-temurin:21-jre@sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a
+2026-10-30T04:24:17.7777913Z #5 sha256:6e994f194cdbcb1372486c2210c7e6381a9b2ad7a813ba96cd7f2c9abec799e9 2.13kB / 2.13kB done
+2026-10-30T04:24:17.7778727Z #5 sha256:3cfdbb0f75d10b24e237c078910bd0340cb75828e1c91e2a0b770a8408dae0ad 8.72kB / 8.72kB done
+2026-10-30T04:24:17.7784193Z #5 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 36.70MB / 42.14MB 0.2s
+2026-10-30T04:24:17.7785077Z #5 sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 9.44MB / 20.14MB 0.2s
+2026-10-30T04:24:17.7785897Z #5 sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a 5.92kB / 5.92kB done
+2026-10-30T04:24:17.7786735Z #5 sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697 392B / 392B 0.1s done
+2026-10-30T04:24:17.7787545Z #5 sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 0B / 53.21MB 0.2s
+2026-10-30T04:24:17.8846880Z #5 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 42.14MB / 42.14MB 0.3s
+2026-10-30T04:24:17.8847726Z #5 sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 20.14MB / 20.14MB 0.3s
+2026-10-30T04:24:17.8848469Z #5 sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 52.43MB / 53.21MB 0.3s
+2026-10-30T04:24:18.2741430Z #5 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 42.14MB / 42.14MB 0.6s done
+2026-10-30T04:24:18.4731153Z #5 sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 20.14MB / 20.14MB 0.7s done
+2026-10-30T04:24:18.4732108Z #5 sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 53.21MB / 53.21MB 0.8s done
+2026-10-30T04:24:18.4733465Z #5 extracting sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf
+2026-10-30T04:24:18.4734276Z #5 sha256:5cec81137da720199b8f279bc24b0054cc7d2e8685fef3d93ea8a9bfa414c909 159B / 159B 0.8s done
+2026-10-30T04:24:18.4734974Z #5 sha256:7bf4c6adbed59b289c82f355d0712c87d1f1cbfed41437f19557ad4f6f7ce057 2.46kB / 2.46kB 0.8s done
+2026-10-30T04:24:20.3626654Z #5 extracting sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 2.0s done
+2026-10-30T04:24:20.3627736Z #5 extracting sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697
+2026-10-30T04:24:20.5137045Z #5 extracting sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697 done
+2026-10-30T04:24:21.5980967Z #5 extracting sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7
+2026-10-30T04:24:22.3417344Z #5 extracting sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 0.6s done
+2026-10-30T04:24:23.4265466Z #5 extracting sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915
+2026-10-30T04:24:24.2372887Z #5 extracting sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 0.7s done
+2026-10-30T04:24:25.1160345Z #5 extracting sha256:5cec81137da720199b8f279bc24b0054cc7d2e8685fef3d93ea8a9bfa414c909
+2026-10-30T04:24:25.2749700Z #5 extracting sha256:5cec81137da720199b8f279bc24b0054cc7d2e8685fef3d93ea8a9bfa414c909 done
+2026-10-30T04:24:25.2750576Z #5 extracting sha256:7bf4c6adbed59b289c82f355d0712c87d1f1cbfed41437f19557ad4f6f7ce057 done
+2026-10-30T04:24:25.3496096Z #5 DONE 7.8s
+2026-10-30T04:24:25.5011039Z 
+2026-10-30T04:24:25.5012010Z #7 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates && rm -rf /var/lib/apt/lists/*
+2026-10-30T04:24:25.6903618Z #7 0.340 Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+2026-10-30T04:24:25.8696226Z #7 0.519 Get:2 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+2026-10-30T04:24:25.9887606Z #7 0.639 Get:3 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [24.6 kB]
+2026-10-30T04:24:26.2151783Z #7 0.715 Get:4 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [609 kB]
+2026-10-30T04:24:26.2317911Z #7 0.882 Get:5 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [258 kB]
+2026-10-30T04:24:26.4107474Z #7 0.910 Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [746 kB]
+2026-10-30T04:24:26.5623900Z #7 1.212 Get:7 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+2026-10-30T04:24:26.8277635Z #7 1.478 Get:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+2026-10-30T04:24:27.0711312Z #7 1.721 Get:9 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+2026-10-30T04:24:28.2205834Z #7 2.870 Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+2026-10-30T04:24:28.3870225Z #7 2.871 Get:11 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]
+2026-10-30T04:24:28.3871009Z #7 2.872 Get:12 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1,874 kB]
+2026-10-30T04:24:28.3872056Z #7 2.879 Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [472 kB]
+2026-10-30T04:24:28.3872899Z #7 2.881 Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [668 kB]
+2026-10-30T04:24:28.3873530Z #7 2.883 Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [991 kB]
+2026-10-30T04:24:28.3874013Z #7 2.886 Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [26.1 kB]
+2026-10-30T04:24:28.4747842Z #7 3.124 Get:17 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3,308 B]
+2026-10-30T04:24:28.8810015Z #7 3.531 Fetched 26.9 MB in 3s (8,106 kB/s)
+2026-10-30T04:24:29.4753823Z #7 3.531 Reading package lists...
+2026-10-30T04:24:30.0604908Z #7 4.142 Reading package lists...
+2026-10-30T04:24:30.2093103Z #7 4.721 Building dependency tree...
+2026-10-30T04:24:30.3691659Z #7 4.859 Reading state information...
+2026-10-30T04:24:30.3692029Z #7 4.887 curl is already the newest version (8.18.0-1ubuntu2.8).
+2026-10-30T04:24:30.3692456Z #7 4.887 ca-certificates is already the newest version (20260816ubuntu0.26.04.1).
+2026-10-30T04:24:30.3692784Z #7 4.887 Solving dependencies...
+2026-10-30T04:24:30.3693069Z #7 5.019 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2026-10-30T04:24:30.5615486Z #7 DONE 5.0s
+2026-10-30T04:24:30.5615705Z 
+2026-10-30T04:24:30.5615819Z #8 [3/4] WORKDIR /app
+2026-10-30T04:24:30.5616023Z #8 DONE 0.0s
+2026-10-30T04:24:30.5616124Z 
+2026-10-30T04:24:30.5616363Z #9 [4/4] COPY --chown=10001:10001 target/motoservice-lite-1.0.0.jar /app/app.jar
+2026-10-30T04:24:30.7825019Z #9 DONE 0.4s
+2026-10-30T04:24:30.9344689Z 
+2026-10-30T04:24:30.9345139Z #10 exporting to image
+2026-10-30T04:24:30.9345487Z #10 exporting layers
+2026-10-30T04:24:31.1887703Z #10 exporting layers 0.4s done
+2026-10-30T04:24:31.2017395Z #10 writing image sha256:a48054ccab1cd1927ff0d9ccdb66a3580667d734b97a41f060a0c214ecd662e3 done
+2026-10-30T04:24:31.2018367Z #10 naming to docker.io/library/motoservice-lite:414d06c743961f943513c41633255ad0c6ea34df done
+2026-10-30T04:24:31.2018921Z #10 DONE 0.4s
+2026-10-30T04:24:31.3842707Z Image: "motoservice-lite:414d06c743961f943513c41633255ad0c6ea34df" with ID "sha256:a48054ccab1cd1927ff0d9ccdb66a3580667d734b97a41f060a0c214ecd662e3" not yet present on node "motoservice-local-control-plane", loading...
+2026-10-30T04:24:45.3876951Z namespace/motoservice-local created
+2026-10-30T04:24:45.6929215Z secret/motoservice-db created
+2026-10-30T04:24:45.9418825Z configmap/motoservice-config created
+2026-10-30T04:24:45.9482408Z deployment.apps/postgres created
+2026-10-30T04:24:45.9608668Z service/postgres created
+2026-10-30T04:24:46.0767734Z Waiting for deployment "postgres" rollout to finish: 0 of 1 updated replicas are available...
+2026-10-30T04:24:51.6877008Z deployment "postgres" successfully rolled out
+2026-10-30T04:24:51.8803526Z deployment.apps/motoservice created
+2026-10-30T04:24:51.8885122Z service/motoservice created
+2026-10-30T04:24:51.9921860Z Waiting for deployment "motoservice" rollout to finish: 0 of 1 updated replicas are available...
+2026-10-30T04:25:12.5012163Z deployment "motoservice" successfully rolled out
+2026-10-30T04:25:12.5142565Z ##[group]Run bash scripts/kind-verify.sh
+2026-10-30T04:25:12.5143046Z [36;1mbash scripts/kind-verify.sh[0m
+2026-10-30T04:25:12.5167255Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:25:12.5167591Z ##[endgroup]
+2026-10-30T04:25:12.6193800Z deployment "postgres" successfully rolled out
+2026-10-30T04:25:12.7103953Z deployment "motoservice" successfully rolled out
+2026-10-30T04:25:17.7118238Z {
+2026-10-30T04:25:17.7120471Z   "status": "PASS",
+2026-10-30T04:25:17.7121181Z   "kind": "REAL_HTTP_POSTGRESQL_SMOKE",
+2026-10-30T04:25:17.7121695Z   "registered_motorcycle": "SMK2272547AF",
+2026-10-30T04:25:17.7122104Z   "slot": 43,
+2026-10-30T04:25:17.7122472Z   "capacity": 2,
+2026-10-30T04:25:17.7122771Z   "confirmed": 2,
+2026-10-30T04:25:17.7123212Z   "waitlist_promoted_to": 3,
+2026-10-30T04:25:17.7123706Z   "advisor_status": "COMPLETED",
+2026-10-30T04:25:17.7124149Z   "service_history_events": 3
+2026-10-30T04:25:17.7124557Z }
+2026-10-30T04:25:17.8134018Z deployment.apps/motoservice restarted
+2026-10-30T04:25:17.9171813Z Waiting for deployment "motoservice" rollout to finish: 1 old replicas are pending termination...
+2026-10-30T04:25:38.4124151Z Waiting for deployment "motoservice" rollout to finish: 1 old replicas are pending termination...
+2026-10-30T04:25:38.4279447Z deployment "motoservice" successfully rolled out
+2026-10-30T04:25:41.7281213Z PASS: completed promoted booking and history survived app restart
+2026-10-30T04:25:41.8470903Z PASS: current app and database containers ready without restart loops
+2026-10-30T04:25:41.8610239Z ##[group]Run mkdir -p artifacts/platform
+2026-10-30T04:25:41.8610576Z [36;1mmkdir -p artifacts/platform[0m
+2026-10-30T04:25:41.8611226Z [36;1mkubectl --context kind-motoservice-local -n motoservice-local get pods -o wide > artifacts/platform/pods.txt || true[0m
+2026-10-30T04:25:41.8611898Z [36;1mkubectl --context kind-motoservice-local -n motoservice-local logs deploy/motoservice > artifacts/platform/app.log || true[0m
+2026-10-30T04:25:41.8629252Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:25:41.8629476Z ##[endgroup]
+2026-10-30T04:25:42.0746759Z ##[group]Run actions/upload-artifact@v4
+2026-10-30T04:25:42.0747010Z with:
+2026-10-30T04:25:42.0747174Z   name: kind-evidence
+2026-10-30T04:25:42.0747366Z   path: artifacts/platform
+2026-10-30T04:25:42.0747568Z   if-no-files-found: warn
+2026-10-30T04:25:42.0747770Z   compression-level: 6
+2026-10-30T04:25:42.0747959Z   overwrite: false
+2026-10-30T04:25:42.0748143Z   include-hidden-files: false
+2026-10-30T04:25:42.0748343Z ##[endgroup]
+2026-10-30T04:25:42.2211893Z (node:6108) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-30T04:25:42.2212825Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T04:25:42.2293210Z With the provided path, there will be 5 files uploaded
+2026-10-30T04:25:42.2294174Z Artifact name is valid!
+2026-10-30T04:25:42.2295209Z Root directory input is valid!
+2026-10-30T04:25:42.5698198Z Beginning upload of artifact content to blob storage
+2026-10-30T04:25:42.6736486Z (node:6108) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-30T04:25:42.8934198Z Uploaded bytes 5619
+2026-10-30T04:25:42.9551341Z Finished uploading artifact content to blob storage!
+2026-10-30T04:25:42.9552229Z SHA256 digest of uploaded artifact zip is 3c7cd9ff21891cb51c381d9c8ac32d895d1b7a5508240b3be97de9c2d45df3c0
+2026-10-30T04:25:42.9553221Z Finalizing artifact upload
+2026-10-30T04:25:43.4157862Z Artifact kind-evidence.zip successfully finalized. Artifact ID 12953724494
+2026-10-30T04:25:43.4158794Z Artifact kind-evidence has been successfully uploaded! Final size is 5619 bytes. Artifact ID is 12953724494
+2026-10-30T04:25:43.4165103Z Artifact download URL: https://github.com/yusufthecoder474/MotoService-Lite/actions/runs/41002535727/artifacts/12953724494
+2026-10-30T04:25:43.4318792Z ##[group]Run bash scripts/kind-down.sh DELETE-motoservice-local
+2026-10-30T04:25:43.4319459Z [36;1mbash scripts/kind-down.sh DELETE-motoservice-local[0m
+2026-10-30T04:25:43.4343815Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:25:43.4344154Z ##[endgroup]
+2026-10-30T04:25:43.4561442Z Deleting cluster "motoservice-local" ...
+2026-10-30T04:25:47.2115374Z Deleted nodes: ["motoservice-local-control-plane"]
+2026-10-30T04:25:47.2210691Z Post job cleanup.
+2026-10-30T04:25:47.2914824Z [command]/usr/bin/git version
+2026-10-30T04:25:47.2982303Z git version 2.56.0
+2026-10-30T04:25:47.3011406Z Temporarily overriding HOME='/home/runner/work/_temp/caad1d70-922b-488a-9b95-b1667630b270' before making global git config changes
+2026-10-30T04:25:47.3012653Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T04:25:47.3016102Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:25:47.3051631Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T04:25:47.3085781Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T04:25:47.3315842Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T04:25:47.3347957Z http.https://github.com/.extraheader
+2026-10-30T04:25:47.3359461Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-30T04:25:47.3394908Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T04:25:47.3631212Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T04:25:47.3671612Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T04:25:47.4027169Z Cleaning up orphan processes
+2026-10-30T04:25:47.4421224Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
