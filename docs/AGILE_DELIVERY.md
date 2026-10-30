@@ -26,6 +26,8 @@ Definition of done: implementation reviewed for preserved behavior; meaningful t
 
 - Hosted validation found that AzureRM represents `secret` as a set, so an indexed lifecycle exclusion was invalid. Changed to an explicit whole-secret exclusion and documented its drift/rotation tradeoff.
 
+- The first real HTTP run found the smoke client handled only `application/json`, while Actuator serves a vendor `+json` media type. Fixed JSON media-type handling while retaining the strict status-only body assertion.
+
 ## PR review checklist
 
 - [ ] Original 65 tests remain; final test counts derived once from reports.

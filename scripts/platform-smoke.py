@@ -64,7 +64,8 @@ class Session:
         with response:
             status, raw = response.status, response.read().decode('utf-8', 'replace')
         assert status == expected, f'{method} {path}: expected {expected}, got {status}'
-        return json.loads(raw) if 'application/json' in response.headers.get('Content-Type', '') else raw
+        media_type = response.headers.get('Content-Type', '').split(';', 1)[0].strip()
+        return json.loads(raw) if media_type == 'application/json' or media_type.endswith('+json') else raw
 
     def login(self, username, password):
         login = self.request('GET', '/login')
