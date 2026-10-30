@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: motoservice-config
+  namespace: motoservice-local
+data:
+  DB_URL: jdbc:postgresql://postgres:5432/motoservice
+  DB_USER: motoservice
+  SERVER_ADDRESS: 0.0.0.0
+  DEMO_ENABLED: "true"

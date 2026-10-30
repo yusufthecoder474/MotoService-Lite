@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: motoservice-local
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels: {app: postgres}
+  template:
+    metadata:
+      labels: {app: postgres}
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsUser: 999
+        runAsGroup: 999
+        fsGroup: 999
+        seccompProfile: {type: RuntimeDefault}
+      containers:
+        - name: postgres
+          image: postgres:16
+          imagePullPolicy: IfNotPresent
+          ports: [{containerPort: 5432}]
+          env:
+            - {name: POSTGRES_DB, value: motoservice}
+            - {name: POSTGRES_USER, value: motoservice}
+            - {name: PGDATA, value: /var/lib/postgresql/data/pgdata}
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef: {name: motoservice-db, key: DB_PASSWORD}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: [ALL]}
+          resources:
+            requests: {cpu: 100m, memory: 128Mi}
+            limits: {cpu: "1", memory: 512Mi}
+          startupProbe:
+            exec: {command: [pg_isready, -U, motoservice, -d, motoservice]}
+            periodSeconds: 5
+            failureThreshold: 30
+          readinessProbe:
+            exec: {command: [pg_isready, -U, motoservice, -d, motoservice]}
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/postgresql/data}
+      volumes:
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: motoservice-local
+spec:
+  selector: {app: postgres}
+  ports: [{port: 5432, targetPort: 5432}]
+  type: ClusterIP

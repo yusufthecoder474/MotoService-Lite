@@ -1,0 +1,10 @@
+subscription_id = "REPLACE_SUBSCRIPTION_ID"
+location = "REPLACE_APPROVED_REGION"
+cost_approved = false
+image = "ghcr.io/REPLACE_OWNER/motoservice-lite:0000000000000000000000000000000000000000"
+db_jdbc_url = "jdbc:postgresql://REPLACE_HOST/motoservice?sslmode=verify-full&sslfactory=org.postgresql.ssl.DefaultJavaSSLFactory"
+db_user = "REPLACE_NON_ADMIN_ROLE"
+db_password_secret_id = "https://REPLACE_VAULT.vault.azure.net/secrets/db-password"
+identity_id = "REPLACE_EXISTING_USER_ASSIGNED_IDENTITY_RESOURCE_ID"
+public_ingress = false
+approved_client_cidrs = []

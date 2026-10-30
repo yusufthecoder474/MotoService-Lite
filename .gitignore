@@ -8,3 +8,18 @@ artifacts/*.log
 artifacts/*.json
 artifacts/*.txt
 artifacts/evaluation-results.md
+
+# Cloud/local platform artifacts
+.terraform/
+*.tfstate*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+*.secret.yaml
+.azure/
+.kube/
+!evidence/raw/*.log
+
+__pycache__/
+*.pyc
+artifacts/platform/

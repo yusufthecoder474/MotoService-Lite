@@ -1,0 +1,5 @@
+resource_group_name = "REPLACE_EXISTING_STATE_RG"
+storage_account_name = "REPLACE_EXISTING_STATE_ACCOUNT"
+container_name = "tfstate"
+key = "motoservice/staging.tfstate"
+use_azuread_auth = true

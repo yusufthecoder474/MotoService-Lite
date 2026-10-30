@@ -1,0 +1,473 @@
+﻿2026-10-30T04:18:28.6604372Z Current runner version: '2.338.0'
+2026-10-30T04:18:28.6633212Z ##[group]Runner Image Provisioner
+2026-10-30T04:18:28.6634121Z Hosted Compute Agent
+2026-10-30T04:18:28.6634854Z Version: 20261021.618
+2026-10-30T04:18:28.6635566Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T04:18:28.6636369Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T04:18:28.6637494Z Worker ID: {ed40255f-3abe-40b9-bff3-0b86f9a460a0}
+2026-10-30T04:18:28.6638319Z Region: westus2
+2026-10-30T04:18:28.6639009Z Cloud: Azure
+2026-10-30T04:18:28.6639644Z ##[endgroup]
+2026-10-30T04:18:28.6641697Z ##[group]Operating System
+2026-10-30T04:18:28.6642427Z Ubuntu
+2026-10-30T04:18:28.6643002Z 24.04.5
+2026-10-30T04:18:28.6643613Z LTS
+2026-10-30T04:18:28.6644217Z ##[endgroup]
+2026-10-30T04:18:28.6644821Z ##[group]Runner Image
+2026-10-30T04:18:28.6645580Z Image: ubuntu-24.04
+2026-10-30T04:18:28.6646232Z Version: 20261025.353.1
+2026-10-30T04:18:28.6647953Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T04:18:28.6649607Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T04:18:28.6650707Z ##[endgroup]
+2026-10-30T04:18:28.6651866Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T04:18:28.6654292Z Contents: read
+2026-10-30T04:18:28.6654959Z Metadata: read
+2026-10-30T04:18:28.6655721Z ##[endgroup]
+2026-10-30T04:18:28.6658263Z Secret source: Actions
+2026-10-30T04:18:28.6659318Z Cache mode: write
+2026-10-30T04:18:28.6660408Z Prepare workflow directory
+2026-10-30T04:18:28.7065207Z Prepare all required actions
+2026-10-30T04:18:28.7115066Z Getting action download info
+2026-10-30T04:18:29.0639483Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-30T04:18:29.1630952Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-10-30T04:18:29.3862274Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-30T04:18:29.5927618Z Complete job name: container
+2026-10-30T04:18:29.6815077Z ##[group]Run actions/checkout@v4
+2026-10-30T04:18:29.6815979Z with:
+2026-10-30T04:18:29.6816483Z   repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:18:29.6820788Z   token: ***
+2026-10-30T04:18:29.6821230Z   ssh-strict: true
+2026-10-30T04:18:29.6821678Z   ssh-user: git
+2026-10-30T04:18:29.6822128Z   persist-credentials: true
+2026-10-30T04:18:29.6822616Z   clean: true
+2026-10-30T04:18:29.6823063Z   sparse-checkout-cone-mode: true
+2026-10-30T04:18:29.6823582Z   fetch-depth: 1
+2026-10-30T04:18:29.6824010Z   fetch-tags: false
+2026-10-30T04:18:29.6824502Z   show-progress: true
+2026-10-30T04:18:29.6824958Z   lfs: false
+2026-10-30T04:18:29.6825364Z   submodules: false
+2026-10-30T04:18:29.6825811Z   set-safe-directory: true
+2026-10-30T04:18:29.6826308Z   allow-unsafe-pr-checkout: false
+2026-10-30T04:18:29.6827267Z ##[endgroup]
+2026-10-30T04:18:30.0145747Z Syncing repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:18:30.0149110Z ##[group]Getting Git version info
+2026-10-30T04:18:30.0150618Z Working directory is '/home/runner/work/MotoService-Lite/MotoService-Lite'
+2026-10-30T04:18:30.0152688Z [command]/usr/bin/git version
+2026-10-30T04:18:30.0223808Z git version 2.56.0
+2026-10-30T04:18:30.0253399Z ##[endgroup]
+2026-10-30T04:18:30.0277521Z Temporarily overriding HOME='/home/runner/work/_temp/eb4558d0-e1c7-4b6e-b112-2573b3e18ab3' before making global git config changes
+2026-10-30T04:18:30.0305652Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T04:18:30.0308329Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:18:30.0363143Z Deleting the contents of '/home/runner/work/MotoService-Lite/MotoService-Lite'
+2026-10-30T04:18:30.0374196Z ##[group]Initializing the repository
+2026-10-30T04:18:30.0394827Z [command]/usr/bin/git init /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:18:30.0551651Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T04:18:30.0556690Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T04:18:30.0558492Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T04:18:30.0559751Z hint: call:
+2026-10-30T04:18:30.0560409Z hint:
+2026-10-30T04:18:30.0561245Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T04:18:30.0562247Z hint:
+2026-10-30T04:18:30.0563360Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T04:18:30.0564896Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T04:18:30.0566123Z hint:
+2026-10-30T04:18:30.0566802Z hint: 	git branch -m <name>
+2026-10-30T04:18:30.0567755Z hint:
+2026-10-30T04:18:30.0568778Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T04:18:30.0570641Z Initialized empty Git repository in /home/runner/work/MotoService-Lite/MotoService-Lite/.git/
+2026-10-30T04:18:30.0590401Z [command]/usr/bin/git remote add origin https://github.com/yusufthecoder474/MotoService-Lite
+2026-10-30T04:18:30.0728715Z ##[endgroup]
+2026-10-30T04:18:30.0730160Z ##[group]Disabling automatic garbage collection
+2026-10-30T04:18:30.0731477Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T04:18:30.0750224Z ##[endgroup]
+2026-10-30T04:18:30.0751618Z ##[group]Setting up auth
+2026-10-30T04:18:30.0753008Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T04:18:30.0806191Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T04:18:30.1302860Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T04:18:30.1380198Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T04:18:30.1672335Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T04:18:30.1730934Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T04:18:30.1988937Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T04:18:30.2042401Z ##[endgroup]
+2026-10-30T04:18:30.2058414Z ##[group]Fetching the repository
+2026-10-30T04:18:30.2060060Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5fd8711a0a326544a28d20067675660abd4f1957:refs/remotes/pull/2/merge
+2026-10-30T04:18:30.4998185Z From https://github.com/yusufthecoder474/MotoService-Lite
+2026-10-30T04:18:30.4999833Z  * [new ref]         5fd8711a0a326544a28d20067675660abd4f1957 -> pull/2/merge
+2026-10-30T04:18:30.5029306Z ##[endgroup]
+2026-10-30T04:18:30.5030180Z ##[group]Determining the checkout info
+2026-10-30T04:18:30.5031076Z ##[endgroup]
+2026-10-30T04:18:30.5031611Z [command]/usr/bin/git sparse-checkout disable
+2026-10-30T04:18:30.5087381Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-30T04:18:30.5143324Z ##[group]Checking out the ref
+2026-10-30T04:18:30.5148891Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+2026-10-30T04:18:30.5296314Z Note: switching to 'refs/remotes/pull/2/merge'.
+2026-10-30T04:18:30.5297596Z 
+2026-10-30T04:18:30.5298277Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-30T04:18:30.5299646Z changes and commit them, and you can discard any commits you make in this
+2026-10-30T04:18:30.5301006Z state without impacting any branches by switching back to a branch.
+2026-10-30T04:18:30.5301805Z 
+2026-10-30T04:18:30.5302389Z If you want to create a new branch to retain commits you create, you may
+2026-10-30T04:18:30.5304036Z do so (now or later) by using -c with the switch command. Example:
+2026-10-30T04:18:30.5304846Z 
+2026-10-30T04:18:30.5305188Z   git switch -c <new-branch-name>
+2026-10-30T04:18:30.5305734Z 
+2026-10-30T04:18:30.5306068Z Or undo this operation with:
+2026-10-30T04:18:30.5306865Z 
+2026-10-30T04:18:30.5307527Z   git switch -
+2026-10-30T04:18:30.5308054Z 
+2026-10-30T04:18:30.5308711Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-30T04:18:30.5309708Z 
+2026-10-30T04:18:30.5311088Z HEAD is now at 5fd8711 Merge 8404997774e6a742f6e0c587399d8fdbd9780b0a into 631c5f459d62ae0b8492a0a374677bf0fb9042e1
+2026-10-30T04:18:30.5314516Z ##[endgroup]
+2026-10-30T04:18:30.5361894Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T04:18:30.5397324Z 5fd8711a0a326544a28d20067675660abd4f1957
+2026-10-30T04:18:30.5835704Z ##[group]Run actions/download-artifact@v4
+2026-10-30T04:18:30.5837366Z with:
+2026-10-30T04:18:30.5838352Z   name: verified-jar
+2026-10-30T04:18:30.5839519Z   path: target
+2026-10-30T04:18:30.5840568Z   merge-multiple: false
+2026-10-30T04:18:30.5841864Z   repository: yusufthecoder474/MotoService-Lite
+2026-10-30T04:18:30.5843321Z   run-id: 41002053475
+2026-10-30T04:18:30.5844405Z ##[endgroup]
+2026-10-30T04:18:30.7567446Z Downloading single artifact
+2026-10-30T04:18:30.7789732Z (node:2540) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-30T04:18:30.7794048Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T04:18:31.0229047Z Preparing to download the following artifacts:
+2026-10-30T04:18:31.0230830Z - verified-jar (ID: 12953423211, Size: 56284769, Expected Digest: sha256:c64e15cb4c4fe9364276f5891db5cca3b0901d8c70f27b4ec4d750da7d9354d7)
+2026-10-30T04:18:31.2613738Z Redirecting to blob download url: https://productionresultssa18.blob.core.windows.net/actions-results/d3b579f8-e1a4-8a4e-a5c9-bc56ca373179/workflow-job-run-e8c6d603-3aa6-5e5d-bb0b-5db4be7ef48a/artifacts/4897e2d2af78858af38a8971b5a58c1bbf0ab81fb4dd99b6096e2a9f4a70fc3c.zip
+2026-10-30T04:18:31.2615896Z Starting download of artifact to: /home/runner/work/MotoService-Lite/MotoService-Lite/target
+2026-10-30T04:18:31.6301801Z (node:2540) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-10-30T04:18:34.4843346Z SHA256 digest of downloaded artifact is c64e15cb4c4fe9364276f5891db5cca3b0901d8c70f27b4ec4d750da7d9354d7
+2026-10-30T04:18:34.4845046Z Artifact download completed successfully.
+2026-10-30T04:18:34.4845764Z Total of 1 artifact(s) downloaded
+2026-10-30T04:18:34.4853421Z Download artifact has finished successfully
+2026-10-30T04:18:34.5073771Z ##[group]Run bash scripts/platform-verify.sh --verified-jar
+2026-10-30T04:18:34.5074372Z [36;1mbash scripts/platform-verify.sh --verified-jar[0m
+2026-10-30T04:18:34.5098819Z shell: /usr/bin/bash -e {0}
+2026-10-30T04:18:34.5099155Z ##[endgroup]
+2026-10-30T04:18:34.8914780Z  db Pulling 
+2026-10-30T04:18:36.1091320Z  6fc242d221a6 Pulling fs layer 
+2026-10-30T04:18:36.1092482Z  d06edb2e3f43 Pulling fs layer 
+2026-10-30T04:18:36.1097883Z  3795839385bc Pulling fs layer 
+2026-10-30T04:18:36.1098736Z  cea4f0db46a6 Pulling fs layer 
+2026-10-30T04:18:36.1099063Z  9b1a18996a22 Pulling fs layer 
+2026-10-30T04:18:36.1099518Z  fbc84e711712 Pulling fs layer 
+2026-10-30T04:18:36.1099799Z  879995175298 Pulling fs layer 
+2026-10-30T04:18:36.1100057Z  d89068781d71 Pulling fs layer 
+2026-10-30T04:18:36.1100313Z  5c4d204f6daa Pulling fs layer 
+2026-10-30T04:18:36.1100563Z  28d8a96df569 Pulling fs layer 
+2026-10-30T04:18:36.1100814Z  b355a8fcc1d3 Pulling fs layer 
+2026-10-30T04:18:36.1101127Z  dc3e98153fd4 Pulling fs layer 
+2026-10-30T04:18:36.1101382Z  c60d02d02e9b Pulling fs layer 
+2026-10-30T04:18:36.1101644Z  7ee6ed8de1c8 Pulling fs layer 
+2026-10-30T04:18:36.1101884Z  5c4d204f6daa Waiting 
+2026-10-30T04:18:36.1102556Z  cea4f0db46a6 Waiting 
+2026-10-30T04:18:36.1102814Z  dc3e98153fd4 Waiting 
+2026-10-30T04:18:36.1103049Z  28d8a96df569 Waiting 
+2026-10-30T04:18:36.1103268Z  c60d02d02e9b Waiting 
+2026-10-30T04:18:36.1103472Z  9b1a18996a22 Waiting 
+2026-10-30T04:18:36.1103716Z  b355a8fcc1d3 Waiting 
+2026-10-30T04:18:36.1103942Z  7ee6ed8de1c8 Waiting 
+2026-10-30T04:18:36.1104156Z  fbc84e711712 Waiting 
+2026-10-30T04:18:36.1104374Z  d89068781d71 Waiting 
+2026-10-30T04:18:36.1104582Z  879995175298 Waiting 
+2026-10-30T04:18:36.3541061Z  d06edb2e3f43 Downloading [==================================================>]   1.17kB/1.17kB
+2026-10-30T04:18:36.3541942Z  d06edb2e3f43 Verifying Checksum 
+2026-10-30T04:18:36.3542502Z  d06edb2e3f43 Download complete 
+2026-10-30T04:18:36.3611159Z  3795839385bc Downloading [>                                                  ]  64.94kB/6.443MB
+2026-10-30T04:18:36.3768411Z  6fc242d221a6 Downloading [>                                                  ]  310.7kB/29.86MB
+2026-10-30T04:18:36.4108832Z  3795839385bc Verifying Checksum 
+2026-10-30T04:18:36.4109837Z  3795839385bc Download complete 
+2026-10-30T04:18:36.4774103Z  6fc242d221a6 Downloading [=================================================> ]  29.26MB/29.86MB
+2026-10-30T04:18:36.4788002Z  6fc242d221a6 Verifying Checksum 
+2026-10-30T04:18:36.4788939Z  6fc242d221a6 Download complete 
+2026-10-30T04:18:36.5147793Z  6fc242d221a6 Extracting [>                                                  ]  327.7kB/29.86MB
+2026-10-30T04:18:36.5778301Z  cea4f0db46a6 Downloading [>                                                  ]  15.79kB/1.257MB
+2026-10-30T04:18:36.6164756Z  cea4f0db46a6 Verifying Checksum 
+2026-10-30T04:18:36.6165287Z  cea4f0db46a6 Download complete 
+2026-10-30T04:18:36.6196857Z  6fc242d221a6 Extracting [===========>                                       ]  6.881MB/29.86MB
+2026-10-30T04:18:36.6411086Z  9b1a18996a22 Downloading [>                                                  ]  97.71kB/8.204MB
+2026-10-30T04:18:36.6949452Z  9b1a18996a22 Verifying Checksum 
+2026-10-30T04:18:36.6953295Z  9b1a18996a22 Download complete 
+2026-10-30T04:18:36.7117241Z  fbc84e711712 Downloading [>                                                  ]  15.79kB/1.312MB
+2026-10-30T04:18:36.7273024Z  6fc242d221a6 Extracting [==================>                                ]  10.81MB/29.86MB
+2026-10-30T04:18:36.7564025Z  fbc84e711712 Verifying Checksum 
+2026-10-30T04:18:36.7565010Z  fbc84e711712 Download complete 
+2026-10-30T04:18:36.8321511Z  6fc242d221a6 Extracting [===========================>                       ]  16.71MB/29.86MB
+2026-10-30T04:18:36.8493952Z  879995175298 Downloading [==================================================>]     116B/116B
+2026-10-30T04:18:36.8507105Z  879995175298 Verifying Checksum 
+2026-10-30T04:18:36.8512486Z  879995175298 Download complete 
+2026-10-30T04:18:36.9258102Z  d89068781d71 Downloading [==================================================>]  3.144kB/3.144kB
+2026-10-30T04:18:36.9259124Z  d89068781d71 Verifying Checksum 
+2026-10-30T04:18:36.9260561Z  d89068781d71 Download complete 
+2026-10-30T04:18:36.9359915Z  6fc242d221a6 Extracting [=========================================>         ]  24.58MB/29.86MB
+2026-10-30T04:18:37.0366364Z  5c4d204f6daa Downloading [>                                                  ]  540.7kB/113.2MB
+2026-10-30T04:18:37.0885442Z  28d8a96df569 Downloading [=================>                                 ]  3.501kB/10.11kB
+2026-10-30T04:18:37.0886639Z  28d8a96df569 Downloading [==================================================>]  10.11kB/10.11kB
+2026-10-30T04:18:37.0891313Z  28d8a96df569 Download complete 
+2026-10-30T04:18:37.1119020Z  6fc242d221a6 Extracting [===========================================>       ]  26.21MB/29.86MB
+2026-10-30T04:18:37.1386626Z  5c4d204f6daa Downloading [==========>                                        ]  24.78MB/113.2MB
+2026-10-30T04:18:37.1622570Z  b355a8fcc1d3 Downloading [==================================================>]     128B/128B
+2026-10-30T04:18:37.1625615Z  b355a8fcc1d3 Verifying Checksum 
+2026-10-30T04:18:37.1627075Z  b355a8fcc1d3 Download complete 
+2026-10-30T04:18:37.2344120Z  6fc242d221a6 Extracting [===============================================>   ]  28.51MB/29.86MB
+2026-10-30T04:18:37.2402599Z  5c4d204f6daa Downloading [========================>                          ]  54.94MB/113.2MB
+2026-10-30T04:18:37.3194575Z  dc3e98153fd4 Downloading [==================================================>]     167B/167B
+2026-10-30T04:18:37.3197467Z  dc3e98153fd4 Verifying Checksum 
+2026-10-30T04:18:37.3198252Z  dc3e98153fd4 Download complete 
+2026-10-30T04:18:37.3399948Z  5c4d204f6daa Downloading [=====================================>             ]  84.56MB/113.2MB
+2026-10-30T04:18:37.3942723Z  c60d02d02e9b Downloading [============================>                      ]  3.502kB/6.108kB
+2026-10-30T04:18:37.3943523Z  c60d02d02e9b Downloading [==================================================>]  6.108kB/6.108kB
+2026-10-30T04:18:37.3944080Z  c60d02d02e9b Verifying Checksum 
+2026-10-30T04:18:37.3944387Z  c60d02d02e9b Download complete 
+2026-10-30T04:18:37.4355140Z  5c4d204f6daa Verifying Checksum 
+2026-10-30T04:18:37.4355759Z  5c4d204f6daa Download complete 
+2026-10-30T04:18:37.4439884Z  6fc242d221a6 Extracting [================================================>  ]  29.16MB/29.86MB
+2026-10-30T04:18:37.5384231Z  6fc242d221a6 Extracting [==================================================>]  29.86MB/29.86MB
+2026-10-30T04:18:37.5494735Z  7ee6ed8de1c8 Downloading [==================================================>]     186B/186B
+2026-10-30T04:18:37.5495227Z  7ee6ed8de1c8 Verifying Checksum 
+2026-10-30T04:18:37.5495509Z  7ee6ed8de1c8 Download complete 
+2026-10-30T04:18:37.5928551Z  6fc242d221a6 Pull complete 
+2026-10-30T04:18:37.5952103Z  d06edb2e3f43 Extracting [==================================================>]   1.17kB/1.17kB
+2026-10-30T04:18:37.5956878Z  d06edb2e3f43 Extracting [==================================================>]   1.17kB/1.17kB
+2026-10-30T04:18:38.0993973Z  d06edb2e3f43 Pull complete 
+2026-10-30T04:18:38.1015594Z  3795839385bc Extracting [>                                                  ]  65.54kB/6.443MB
+2026-10-30T04:18:38.2039424Z  3795839385bc Extracting [==================================================>]  6.443MB/6.443MB
+2026-10-30T04:18:38.2630770Z  3795839385bc Pull complete 
+2026-10-30T04:18:38.2643044Z  cea4f0db46a6 Extracting [=>                                                 ]  32.77kB/1.257MB
+2026-10-30T04:18:38.2847266Z  cea4f0db46a6 Extracting [==================================================>]  1.257MB/1.257MB
+2026-10-30T04:18:38.2975342Z  cea4f0db46a6 Pull complete 
+2026-10-30T04:18:38.2995128Z  9b1a18996a22 Extracting [>                                                  ]   98.3kB/8.204MB
+2026-10-30T04:18:38.4023951Z  9b1a18996a22 Extracting [=======================>                           ]  3.932MB/8.204MB
+2026-10-30T04:18:38.5028269Z  9b1a18996a22 Extracting [====================================>              ]  5.997MB/8.204MB
+2026-10-30T04:18:38.5594514Z  9b1a18996a22 Extracting [==================================================>]  8.204MB/8.204MB
+2026-10-30T04:18:38.5960080Z  9b1a18996a22 Pull complete 
+2026-10-30T04:18:38.5972992Z  fbc84e711712 Extracting [=>                                                 ]  32.77kB/1.312MB
+2026-10-30T04:18:38.6339214Z  fbc84e711712 Extracting [==================================================>]  1.312MB/1.312MB
+2026-10-30T04:18:38.6550930Z  fbc84e711712 Pull complete 
+2026-10-30T04:18:38.6562251Z  879995175298 Extracting [==================================================>]     116B/116B
+2026-10-30T04:18:38.6566251Z  879995175298 Extracting [==================================================>]     116B/116B
+2026-10-30T04:18:38.6698101Z  879995175298 Pull complete 
+2026-10-30T04:18:38.6709203Z  d89068781d71 Extracting [==================================================>]  3.144kB/3.144kB
+2026-10-30T04:18:38.6713098Z  d89068781d71 Extracting [==================================================>]  3.144kB/3.144kB
+2026-10-30T04:18:38.6781039Z  d89068781d71 Pull complete 
+2026-10-30T04:18:38.7290475Z  5c4d204f6daa Extracting [>                                                  ]  557.1kB/113.2MB
+2026-10-30T04:18:38.8453650Z  5c4d204f6daa Extracting [===>                                               ]  7.799MB/113.2MB
+2026-10-30T04:18:38.9464890Z  5c4d204f6daa Extracting [====>                                              ]  10.58MB/113.2MB
+2026-10-30T04:18:39.0520174Z  5c4d204f6daa Extracting [======>                                            ]  15.04MB/113.2MB
+2026-10-30T04:18:39.1568439Z  5c4d204f6daa Extracting [========>                                          ]  20.05MB/113.2MB
+2026-10-30T04:18:39.2625570Z  5c4d204f6daa Extracting [===========>                                       ]  25.62MB/113.2MB
+2026-10-30T04:18:39.3654988Z  5c4d204f6daa Extracting [===============>                                   ]  35.09MB/113.2MB
+2026-10-30T04:18:39.4698361Z  5c4d204f6daa Extracting [===================>                               ]  44.56MB/113.2MB
+2026-10-30T04:18:39.5725897Z  5c4d204f6daa Extracting [=======================>                           ]  53.48MB/113.2MB
+2026-10-30T04:18:39.6768805Z  5c4d204f6daa Extracting [=========================>                         ]  58.49MB/113.2MB
+2026-10-30T04:18:39.7816226Z  5c4d204f6daa Extracting [=============================>                     ]  66.85MB/113.2MB
+2026-10-30T04:18:39.8881566Z  5c4d204f6daa Extracting [=================================>                 ]  76.87MB/113.2MB
+2026-10-30T04:18:39.9911962Z  5c4d204f6daa Extracting [=====================================>             ]  85.79MB/113.2MB
+2026-10-30T04:18:40.0941272Z  5c4d204f6daa Extracting [=========================================>         ]   94.7MB/113.2MB
+2026-10-30T04:18:40.2007620Z  5c4d204f6daa Extracting [===========================================>       ]  97.48MB/113.2MB
+2026-10-30T04:18:40.3172987Z  5c4d204f6daa Extracting [============================================>      ]  100.8MB/113.2MB
+2026-10-30T04:18:40.4316207Z  5c4d204f6daa Extracting [==============================================>    ]  105.3MB/113.2MB
+2026-10-30T04:18:40.5395269Z  5c4d204f6daa Extracting [===============================================>   ]  107.5MB/113.2MB
+2026-10-30T04:18:40.6495315Z  5c4d204f6daa Extracting [================================================>  ]  109.2MB/113.2MB
+2026-10-30T04:18:40.7645308Z  5c4d204f6daa Extracting [================================================>  ]  110.9MB/113.2MB
+2026-10-30T04:18:40.9786791Z  5c4d204f6daa Extracting [=================================================> ]    112MB/113.2MB
+2026-10-30T04:18:41.0844929Z  5c4d204f6daa Extracting [==================================================>]  113.2MB/113.2MB
+2026-10-30T04:18:41.6696145Z  5c4d204f6daa Pull complete 
+2026-10-30T04:18:41.6706569Z  28d8a96df569 Extracting [==================================================>]  10.11kB/10.11kB
+2026-10-30T04:18:41.6712329Z  28d8a96df569 Extracting [==================================================>]  10.11kB/10.11kB
+2026-10-30T04:18:41.6851630Z  28d8a96df569 Pull complete 
+2026-10-30T04:18:41.6863191Z  b355a8fcc1d3 Extracting [==================================================>]     128B/128B
+2026-10-30T04:18:41.6867593Z  b355a8fcc1d3 Extracting [==================================================>]     128B/128B
+2026-10-30T04:18:41.6945047Z  b355a8fcc1d3 Pull complete 
+2026-10-30T04:18:41.6960259Z  dc3e98153fd4 Extracting [==================================================>]     167B/167B
+2026-10-30T04:18:41.6963048Z  dc3e98153fd4 Extracting [==================================================>]     167B/167B
+2026-10-30T04:18:41.7043175Z  dc3e98153fd4 Pull complete 
+2026-10-30T04:18:41.7055456Z  c60d02d02e9b Extracting [==================================================>]  6.108kB/6.108kB
+2026-10-30T04:18:41.7059782Z  c60d02d02e9b Extracting [==================================================>]  6.108kB/6.108kB
+2026-10-30T04:18:41.7132942Z  c60d02d02e9b Pull complete 
+2026-10-30T04:18:41.7144653Z  7ee6ed8de1c8 Extracting [==================================================>]     186B/186B
+2026-10-30T04:18:41.7148783Z  7ee6ed8de1c8 Extracting [==================================================>]     186B/186B
+2026-10-30T04:18:41.7231070Z  7ee6ed8de1c8 Pull complete 
+2026-10-30T04:18:41.7294802Z  db Pulled 
+2026-10-30T04:18:41.9964008Z #1 [internal] load local bake definitions
+2026-10-30T04:18:42.2235101Z #1 reading from stdin 529B done
+2026-10-30T04:18:42.2236073Z #1 DONE 0.0s
+2026-10-30T04:18:42.2236438Z 
+2026-10-30T04:18:42.2236805Z #2 [internal] load build definition from Dockerfile
+2026-10-30T04:18:42.2237705Z #2 transferring dockerfile: 642B done
+2026-10-30T04:18:42.2238125Z #2 DONE 0.0s
+2026-10-30T04:18:42.2238275Z 
+2026-10-30T04:18:42.2238572Z #3 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre
+2026-10-30T04:18:42.4246135Z #3 ...
+2026-10-30T04:18:42.4246407Z 
+2026-10-30T04:18:42.4246695Z #4 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+2026-10-30T04:18:42.4247589Z #4 DONE 0.0s
+2026-10-30T04:18:42.5750463Z 
+2026-10-30T04:18:42.5751240Z #3 [internal] load metadata for docker.io/library/eclipse-temurin:21-jre
+2026-10-30T04:18:42.8892747Z #3 DONE 0.8s
+2026-10-30T04:18:43.0076589Z 
+2026-10-30T04:18:43.0088695Z #5 [internal] load .dockerignore
+2026-10-30T04:18:43.0089298Z #5 transferring context: 108B done
+2026-10-30T04:18:43.0089823Z #5 DONE 0.0s
+2026-10-30T04:18:43.0090058Z 
+2026-10-30T04:18:43.0090818Z #6 [1/4] FROM docker.io/library/eclipse-temurin:21-jre@sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a
+2026-10-30T04:18:43.0092345Z #6 resolve docker.io/library/eclipse-temurin:21-jre@sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a done
+2026-10-30T04:18:43.1081304Z #6 sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a 5.92kB / 5.92kB done
+2026-10-30T04:18:43.1082954Z #6 sha256:6e994f194cdbcb1372486c2210c7e6381a9b2ad7a813ba96cd7f2c9abec799e9 2.13kB / 2.13kB done
+2026-10-30T04:18:43.1084648Z #6 sha256:3cfdbb0f75d10b24e237c078910bd0340cb75828e1c91e2a0b770a8408dae0ad 8.72kB / 8.72kB done
+2026-10-30T04:18:43.1086151Z #6 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 0B / 42.14MB 0.1s
+2026-10-30T04:18:43.1087714Z #6 sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697 0B / 392B 0.1s
+2026-10-30T04:18:43.1089015Z #6 sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 0B / 20.14MB 0.1s
+2026-10-30T04:18:43.2128367Z #6 ...
+2026-10-30T04:18:43.2128863Z 
+2026-10-30T04:18:43.2129444Z #7 [internal] load build context
+2026-10-30T04:18:43.2130179Z #7 transferring context: 63.06MB 0.2s done
+2026-10-30T04:18:43.2130767Z #7 DONE 0.2s
+2026-10-30T04:18:43.2131113Z 
+2026-10-30T04:18:43.2132343Z #6 [1/4] FROM docker.io/library/eclipse-temurin:21-jre@sha256:0b99b3376fbb50dbf9c0af8535fdd5b8eb0d3fdfc8b1e4967f383b6919f6901a
+2026-10-30T04:18:43.2134122Z #6 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 42.14MB / 42.14MB 0.2s done
+2026-10-30T04:18:43.2135547Z #6 sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697 392B / 392B 0.2s done
+2026-10-30T04:18:43.2137117Z #6 sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 12.58MB / 20.14MB 0.3s
+2026-10-30T04:18:43.2138537Z #6 sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 11.53MB / 53.21MB 0.3s
+2026-10-30T04:18:43.2139868Z #6 sha256:5cec81137da720199b8f279bc24b0054cc7d2e8685fef3d93ea8a9bfa414c909 0B / 159B 0.3s
+2026-10-30T04:18:43.3298960Z #6 sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 20.14MB / 20.14MB 0.3s done
+2026-10-30T04:18:43.3300406Z #6 sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 48.23MB / 53.21MB 0.4s
+2026-10-30T04:18:43.3301820Z #6 sha256:5cec81137da720199b8f279bc24b0054cc7d2e8685fef3d93ea8a9bfa414c909 159B / 159B 0.3s done
+2026-10-30T04:18:43.3303194Z #6 extracting sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 0.1s
+2026-10-30T04:18:43.3304724Z #6 sha256:7bf4c6adbed59b289c82f355d0712c87d1f1cbfed41437f19557ad4f6f7ce057 0B / 2.46kB 0.4s
+2026-10-30T04:18:43.4300311Z #6 sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 53.21MB / 53.21MB 0.4s done
+2026-10-30T04:18:43.4301896Z #6 sha256:7bf4c6adbed59b289c82f355d0712c87d1f1cbfed41437f19557ad4f6f7ce057 2.46kB / 2.46kB 0.4s done
+2026-10-30T04:18:45.3988510Z #6 extracting sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 2.2s done
+2026-10-30T04:18:45.5951813Z #6 extracting sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697 done
+2026-10-30T04:18:45.5953105Z #6 extracting sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 0.1s
+2026-10-30T04:18:46.2814451Z #6 extracting sha256:d6c2cb069076049f26b59aaca7c1d09fd75a23b64cc4b2b4f63d04465e334ea7 0.7s done
+2026-10-30T04:18:46.2815814Z #6 extracting sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915
+2026-10-30T04:18:47.0881866Z #6 extracting sha256:b27fb70cc2e5debd2278dbbd2d7cc0665e63785bd8c751ea1682be3dabe79915 0.7s done
+2026-10-30T04:18:47.0936064Z #6 extracting sha256:5cec81137da720199b8f279bc24b0054cc7d2e8685fef3d93ea8a9bfa414c909
+2026-10-30T04:18:47.2797285Z #6 extracting sha256:5cec81137da720199b8f279bc24b0054cc7d2e8685fef3d93ea8a9bfa414c909 done
+2026-10-30T04:18:47.2798755Z #6 extracting sha256:7bf4c6adbed59b289c82f355d0712c87d1f1cbfed41437f19557ad4f6f7ce057 done
+2026-10-30T04:18:47.2799767Z #6 DONE 4.2s
+2026-10-30T04:18:47.2807575Z 
+2026-10-30T04:18:47.2808308Z #8 [2/4] RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates && rm -rf /var/lib/apt/lists/*
+2026-10-30T04:18:47.5660223Z #8 0.437 Get:1 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+2026-10-30T04:18:47.7348039Z #8 0.606 Get:2 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+2026-10-30T04:18:48.1950444Z #8 1.066 Get:3 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [24.6 kB]
+2026-10-30T04:18:48.3529058Z #8 1.224 Get:4 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [746 kB]
+2026-10-30T04:18:48.5974205Z #8 1.468 Get:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+2026-10-30T04:18:48.7216880Z #8 1.593 Get:6 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [609 kB]
+2026-10-30T04:18:48.8329245Z #8 1.704 Get:7 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [258 kB]
+2026-10-30T04:18:49.0280777Z #8 1.780 Get:8 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+2026-10-30T04:18:49.0281620Z #8 1.899 Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1,874 kB]
+2026-10-30T04:18:49.5976548Z #8 2.469 Get:10 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+2026-10-30T04:18:49.7491755Z #8 2.542 Get:11 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]
+2026-10-30T04:18:49.7493415Z #8 2.620 Get:12 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+2026-10-30T04:18:50.0809352Z #8 2.952 Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [991 kB]
+2026-10-30T04:18:50.2251065Z #8 3.024 Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [472 kB]
+2026-10-30T04:18:50.3660879Z #8 3.096 Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [26.1 kB]
+2026-10-30T04:18:50.3662139Z #8 3.165 Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [668 kB]
+2026-10-30T04:18:50.3663267Z #8 3.237 Get:17 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3,308 B]
+2026-10-30T04:18:50.6892156Z #8 3.560 Fetched 26.9 MB in 3s (7,924 kB/s)
+2026-10-30T04:18:51.3542222Z #8 3.560 Reading package lists...
+2026-10-30T04:18:52.0325928Z #8 4.245 Reading package lists...
+2026-10-30T04:18:52.2143222Z #8 4.917 Building dependency tree...
+2026-10-30T04:18:52.3979398Z #8 5.085 Reading state information...
+2026-10-30T04:18:52.3980400Z #8 5.116 curl is already the newest version (8.18.0-1ubuntu2.8).
+2026-10-30T04:18:52.3981063Z #8 5.116 ca-certificates is already the newest version (20260816ubuntu0.26.04.1).
+2026-10-30T04:18:52.3981584Z #8 5.116 Solving dependencies...
+2026-10-30T04:18:52.3982012Z #8 5.269 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2026-10-30T04:18:52.5008171Z #8 DONE 5.3s
+2026-10-30T04:18:52.5009511Z 
+2026-10-30T04:18:52.5009780Z #9 [3/4] WORKDIR /app
+2026-10-30T04:18:52.5010187Z #9 DONE 0.0s
+2026-10-30T04:18:52.5010716Z 
+2026-10-30T04:18:52.5011184Z #10 [4/4] COPY --chown=10001:10001 target/motoservice-lite-1.0.0.jar /app/app.jar
+2026-10-30T04:18:52.5012024Z #10 DONE 0.1s
+2026-10-30T04:18:52.6525175Z 
+2026-10-30T04:18:52.6525945Z #11 exporting to image
+2026-10-30T04:18:52.6526553Z #11 exporting layers
+2026-10-30T04:18:53.0231389Z #11 exporting layers 0.5s done
+2026-10-30T04:18:53.0527327Z #11 writing image sha256:7bbab0a214fac14e196f612bc447047b7c9dc2585072baee42939690b18e088e done
+2026-10-30T04:18:53.0528435Z #11 naming to docker.io/library/motoservice-lite:5fd8711a0a326544a28d20067675660abd4f1957 done
+2026-10-30T04:18:53.0529125Z #11 DONE 0.5s
+2026-10-30T04:18:53.0529259Z 
+2026-10-30T04:18:53.0529496Z #12 resolving provenance for metadata file
+2026-10-30T04:18:53.0529941Z #12 DONE 0.0s
+2026-10-30T04:18:53.0530161Z  app  Built
+2026-10-30T04:18:53.0545469Z  Network motoservice-check-1793333914-2585_default  Creating
+2026-10-30T04:18:53.0915451Z  Network motoservice-check-1793333914-2585_default  Created
+2026-10-30T04:18:53.0977761Z  Volume "motoservice-check-1793333914-2585_platform-data"  Creating
+2026-10-30T04:18:53.0990988Z  Volume "motoservice-check-1793333914-2585_platform-data"  Created
+2026-10-30T04:18:53.0996406Z  Container motoservice-check-1793333914-2585-db-1  Creating
+2026-10-30T04:18:53.1203938Z  Container motoservice-check-1793333914-2585-db-1  Created
+2026-10-30T04:18:53.1204754Z  Container motoservice-check-1793333914-2585-app-1  Creating
+2026-10-30T04:18:53.1301918Z  Container motoservice-check-1793333914-2585-app-1  Created
+2026-10-30T04:18:53.1312086Z  Container motoservice-check-1793333914-2585-db-1  Starting
+2026-10-30T04:18:53.3009988Z  Container motoservice-check-1793333914-2585-db-1  Started
+2026-10-30T04:18:53.3010456Z  Container motoservice-check-1793333914-2585-db-1  Waiting
+2026-10-30T04:18:56.8023194Z  Container motoservice-check-1793333914-2585-db-1  Healthy
+2026-10-30T04:18:56.8024184Z  Container motoservice-check-1793333914-2585-app-1  Starting
+2026-10-30T04:18:56.9577839Z  Container motoservice-check-1793333914-2585-app-1  Started
+2026-10-30T04:18:56.9578841Z  Container motoservice-check-1793333914-2585-app-1  Waiting
+2026-10-30T04:18:56.9579965Z  Container motoservice-check-1793333914-2585-db-1  Waiting
+2026-10-30T04:18:57.4598583Z  Container motoservice-check-1793333914-2585-db-1  Healthy
+2026-10-30T04:19:07.4580374Z  Container motoservice-check-1793333914-2585-app-1  Healthy
+2026-10-30T04:19:07.9206172Z Traceback (most recent call last):
+2026-10-30T04:19:07.9207894Z   File "/home/runner/work/MotoService-Lite/MotoService-Lite/scripts/platform-smoke.py", line 165, in <module>
+2026-10-30T04:19:07.9208878Z     main()
+2026-10-30T04:19:07.9209756Z   File "/home/runner/work/MotoService-Lite/MotoService-Lite/scripts/platform-smoke.py", line 97, in main
+2026-10-30T04:19:07.9211153Z     assert Session().request('GET', '/actuator/health/'+probe) == {'status': 'UP'}
+2026-10-30T04:19:07.9211734Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-30T04:19:07.9212143Z AssertionError
+2026-10-30T04:19:08.1078585Z  Container motoservice-check-1793333914-2585-app-1  Stopping
+2026-10-30T04:19:08.2852948Z  Container motoservice-check-1793333914-2585-app-1  Stopped
+2026-10-30T04:19:08.2857350Z  Container motoservice-check-1793333914-2585-app-1  Removing
+2026-10-30T04:19:08.2941488Z  Container motoservice-check-1793333914-2585-app-1  Removed
+2026-10-30T04:19:08.2944615Z  Container motoservice-check-1793333914-2585-db-1  Stopping
+2026-10-30T04:19:08.3820771Z  Container motoservice-check-1793333914-2585-db-1  Stopped
+2026-10-30T04:19:08.3821551Z  Container motoservice-check-1793333914-2585-db-1  Removing
+2026-10-30T04:19:08.3882060Z  Container motoservice-check-1793333914-2585-db-1  Removed
+2026-10-30T04:19:08.3891364Z  Volume motoservice-check-1793333914-2585_platform-data  Removing
+2026-10-30T04:19:08.3894012Z  Network motoservice-check-1793333914-2585_default  Removing
+2026-10-30T04:19:08.4628776Z  Network motoservice-check-1793333914-2585_default  Removed
+2026-10-30T04:19:08.4919748Z  Volume motoservice-check-1793333914-2585_platform-data  Removed
+2026-10-30T04:19:08.4993453Z ##[error]Process completed with exit code 1.
+2026-10-30T04:19:08.5084790Z ##[group]Run actions/upload-artifact@v4
+2026-10-30T04:19:08.5085100Z with:
+2026-10-30T04:19:08.5085308Z   name: container-evidence
+2026-10-30T04:19:08.5085561Z   path: artifacts/platform
+2026-10-30T04:19:08.5085809Z   if-no-files-found: warn
+2026-10-30T04:19:08.5086058Z   compression-level: 6
+2026-10-30T04:19:08.5086277Z   overwrite: false
+2026-10-30T04:19:08.5086497Z   include-hidden-files: false
+2026-10-30T04:19:08.5086748Z ##[endgroup]
+2026-10-30T04:19:08.6961617Z (node:3510) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-30T04:19:08.6962835Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T04:19:08.7030844Z With the provided path, there will be 1 file uploaded
+2026-10-30T04:19:08.7051805Z Artifact name is valid!
+2026-10-30T04:19:08.7053092Z Root directory input is valid!
+2026-10-30T04:19:09.0741089Z Beginning upload of artifact content to blob storage
+2026-10-30T04:19:09.0989168Z (node:3510) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-30T04:19:09.3869674Z Uploaded bytes 3312
+2026-10-30T04:19:09.4668728Z Finished uploading artifact content to blob storage!
+2026-10-30T04:19:09.4669984Z SHA256 digest of uploaded artifact zip is 1df5c0fac3b8a59c4e47ce6f917172fe4cd040f95f2d20837987d05558362321
+2026-10-30T04:19:09.4671621Z Finalizing artifact upload
+2026-10-30T04:19:10.0488542Z Artifact container-evidence.zip successfully finalized. Artifact ID 12954290407
+2026-10-30T04:19:10.0489854Z Artifact container-evidence has been successfully uploaded! Final size is 3312 bytes. Artifact ID is 12954290407
+2026-10-30T04:19:10.0491245Z Artifact download URL: https://github.com/yusufthecoder474/MotoService-Lite/actions/runs/41002053475/artifacts/12954290407
+2026-10-30T04:19:10.0713903Z Post job cleanup.
+2026-10-30T04:19:10.1619424Z [command]/usr/bin/git version
+2026-10-30T04:19:10.1669273Z git version 2.56.0
+2026-10-30T04:19:10.1744464Z Temporarily overriding HOME='/home/runner/work/_temp/019d456d-056e-4b23-95db-5b40fbf40211' before making global git config changes
+2026-10-30T04:19:10.1745772Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T04:19:10.1752172Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/MotoService-Lite/MotoService-Lite
+2026-10-30T04:19:10.1799177Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T04:19:10.1842022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T04:19:10.2124588Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T04:19:10.2159411Z http.https://github.com/.extraheader
+2026-10-30T04:19:10.2172419Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-30T04:19:10.2215343Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T04:19:10.2495515Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T04:19:10.2545151Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T04:19:10.3027454Z Cleaning up orphan processes
+2026-10-30T04:19:10.3571962Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
