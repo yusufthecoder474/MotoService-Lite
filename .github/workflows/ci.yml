@@ -1,9 +1,11 @@
-name: Java and PostgreSQL verification
+name: Java and platform verification
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -20,3 +22,77 @@ jobs:
             target/surefire-reports
             target/failsafe-reports
             target/evaluation
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-jar
+          path: target/motoservice-lite-1.0.0.jar
+          retention-days: 7
+  container:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-jar
+          path: target
+      - run: bash scripts/platform-verify.sh --verified-jar
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: container-evidence
+          path: artifacts/platform
+  terraform:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.8
+      - run: terraform -chdir=infra/terraform fmt -check -recursive
+      - run: terraform -chdir=infra/terraform init -backend=false -input=false
+      - run: terraform -chdir=infra/terraform validate -no-color
+  configuration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install PyYAML==6.0.2
+      - run: python3 scripts/validate-platform.py
+      - name: Kubernetes API schema validation
+        run: |
+          curl -fsSL https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz | tar xz kubeconform
+          ./kubeconform -strict -summary -kubernetes-version 1.32.0 deploy/k8s/app.yaml deploy/k8s/postgres.yaml deploy/k8s/configmap.yaml deploy/k8s/namespace.yaml deploy/k8s/secret.example.yaml
+      - run: bash -n scripts/kind-up.sh scripts/kind-verify.sh scripts/kind-down.sh scripts/platform-verify.sh
+  kind:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-jar
+          path: target
+      - name: Install kind
+        run: |
+          curl -fsSL https://kind.sigs.k8s.io/dl/v0.33.0/kind-linux-amd64 -o kind
+          chmod +x kind
+          sudo mv kind /usr/local/bin/kind
+      - run: bash scripts/kind-up.sh
+      - run: bash scripts/kind-verify.sh
+      - name: Diagnostics
+        if: always()
+        run: |
+          mkdir -p artifacts/platform
+          kubectl --context kind-motoservice-local -n motoservice-local get pods -o wide > artifacts/platform/pods.txt || true
+          kubectl --context kind-motoservice-local -n motoservice-local logs deploy/motoservice > artifacts/platform/app.log || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kind-evidence
+          path: artifacts/platform
+      - if: always()
+        run: bash scripts/kind-down.sh DELETE-motoservice-local

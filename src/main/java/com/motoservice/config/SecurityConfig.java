@@ -42,7 +42,14 @@ public class SecurityConfig {
   SecurityFilterChain security(HttpSecurity http, ObjectMapper mapper) throws Exception {
     http.authorizeHttpRequests(
             a ->
-                a.requestMatchers("/login", "/style.css", "/error")
+                a.requestMatchers(
+                        org.springframework.http.HttpMethod.GET,
+                        "/actuator/health/liveness",
+                        "/actuator/health/readiness")
+                    .permitAll()
+                    .requestMatchers("/actuator", "/actuator/**")
+                    .denyAll()
+                    .requestMatchers("/login", "/style.css", "/error")
                     .permitAll()
                     .requestMatchers("/api/advisor/**", "/advisor/**")
                     .hasRole("SERVICE_ADVISOR")

@@ -1,0 +1,33 @@
+# Isolated synthetic demo; does not share the normal RUN_ALL database or ports.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: motoservice
+      POSTGRES_USER: motoservice
+      POSTGRES_PASSWORD: ${PLATFORM_DB_PASSWORD:?Generate an ephemeral password first}
+    volumes: [platform-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U motoservice -d motoservice"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+  app:
+    image: motoservice-lite:${IMAGE_TAG:?Use a commit SHA}
+    build:
+      context: .
+      args:
+        VCS_REF: ${IMAGE_TAG}
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/motoservice
+      DB_USER: motoservice
+      DB_PASSWORD: ${PLATFORM_DB_PASSWORD}
+      SERVER_ADDRESS: 0.0.0.0
+      DEMO_ENABLED: "true"
+    depends_on:
+      db: {condition: service_healthy}
+    ports: ["127.0.0.1:18082:8080"]
+    mem_limit: 768m
+    stop_grace_period: 40s
+volumes:
+  platform-data:

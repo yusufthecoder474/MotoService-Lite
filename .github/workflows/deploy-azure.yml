@@ -1,0 +1,71 @@
+name: Approved Azure staging update
+on:
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: Full SHA of a successful CI run and already published public GHCR image
+        required: true
+        type: string
+      approval:
+        description: Type APPROVE-STAGING-COSTS only after subscription, costs and networking review
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+  id-token: write
+concurrency:
+  group: azure-staging
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: inputs.approval == 'APPROVE-STAGING-COSTS'
+    environment: azure-staging
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SHA: ${{ inputs.commit_sha }}
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
+      APP_NAME: ${{ vars.AZURE_APP_NAME }}
+      BASE_URL: ${{ vars.STAGING_BASE_URL }}
+    steps:
+      - name: Validate approvals and successful CI
+        env:
+          COST_APPROVED: ${{ vars.AZURE_COST_APPROVED }}
+        run: |
+          test "$COST_APPROVED" = true
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]]
+          test -n "$RESOURCE_GROUP" && test -n "$APP_NAME"
+          [[ "$BASE_URL" == https://* ]]
+          gh api "repos/$REPO/actions/workflows/ci.yml/runs?head_sha=$SHA&status=success" --jq '.workflow_runs | length > 0' | grep -qx true
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.commit_sha }}
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      - name: Update existing app only (no provisioning)
+        run: |
+          az containerapp show --name "$APP_NAME" --resource-group "$RESOURCE_GROUP" --query 'properties.template.containers[0].env' -o json | python3 -c 'import json,sys; e={x["name"]:x for x in json.load(sys.stdin)}; assert e["SPRING_PROFILES_ACTIVE"]["value"]=="cloud"; assert e["DEMO_ENABLED"]["value"]=="false"; assert e["DB_PASSWORD"].get("secretRef"); assert "sslmode=verify-full" in e["DB_URL"]["value"]'
+          image="ghcr.io/${REPO,,}:$SHA"
+          az containerapp update --name "$APP_NAME" --resource-group "$RESOURCE_GROUP" --image "$image" --output none
+      - name: Read-only health verification
+        run: |
+          for probe in liveness readiness; do
+            curl --fail --silent --show-error --retry 30 --retry-all-errors --retry-delay 5 "$BASE_URL/actuator/health/$probe" | python3 -c 'import json,sys; assert json.load(sys.stdin)=={"status":"UP"}'
+          done
+      - name: Authenticated staging workflow (creates synthetic records)
+        env:
+          SMOKE_C1_USER: ${{ secrets.SMOKE_C1_USER }}
+          SMOKE_C1_PASSWORD: ${{ secrets.SMOKE_C1_PASSWORD }}
+          SMOKE_C2_USER: ${{ secrets.SMOKE_C2_USER }}
+          SMOKE_C2_PASSWORD: ${{ secrets.SMOKE_C2_PASSWORD }}
+          SMOKE_C3_USER: ${{ secrets.SMOKE_C3_USER }}
+          SMOKE_C3_PASSWORD: ${{ secrets.SMOKE_C3_PASSWORD }}
+          SMOKE_ADVISOR_USER: ${{ secrets.SMOKE_ADVISOR_USER }}
+          SMOKE_ADVISOR_PASSWORD: ${{ secrets.SMOKE_ADVISOR_PASSWORD }}
+        run: python3 scripts/platform-smoke.py

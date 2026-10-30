@@ -97,3 +97,8 @@ One slot serializes admissions, intentionally favoring correctness. Different sl
 - [Spring Security CSRF documentation](https://docs.spring.io/spring-security/reference/servlet/exploits/csrf.html).
 
 These describe platform behavior; they do not substitute for executing this application's database tests.
+
+
+## Platform extension
+
+The existing application design above is preserved. See [LOW_LEVEL_DESIGN.md](LOW_LEVEL_DESIGN.md) for controller/service/repository contracts and the intended Azure topology, [ADR 0001](adr/0001-container-apps-and-local-kind.md) for the hosting decision, and the [verification ledger](../evidence/PG_CLOUD_UPGRADE_VERIFICATION.md) for actual execution. Local kind is a separate educational Kubernetes deployment; Azure remains NOT DEPLOYED.
