@@ -24,6 +24,8 @@ Definition of done: implementation reviewed for preserved behavior; meaningful t
 - Added regression checks for duplicated JDBC TLS parameters and persisted published demo accounts. A simple substring check is insufficient for TLS configuration validation.
 - Added a separate disposable Compose project so the restart test cannot reset the user's normal local database.
 
+- Hosted validation found that AzureRM represents `secret` as a set, so an indexed lifecycle exclusion was invalid. Changed to an explicit whole-secret exclusion and documented its drift/rotation tradeoff.
+
 ## PR review checklist
 
 - [ ] Original 65 tests remain; final test counts derived once from reports.

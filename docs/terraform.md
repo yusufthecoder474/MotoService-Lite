@@ -22,7 +22,7 @@ Only after approval:
 4. Run `terraform -chdir=infra/terraform plan -out=reviewed.tfplan` and privately inspect the plan. It must contain only the reviewed four resources, correct IDs, one app replica, no unexpected replacement/deletion, restricted ingress and correct Key Vault reference. The plan may contain sensitive data even when output hides it.
 5. After approval of this exact plan, run `terraform -chdir=infra/terraform apply reviewed.tfplan`. Do not use `-auto-approve`. Validate the running application separately.
 
-The workspace daily log quota is not a spending cap. One app replica is deliberately retained for a simple session-based demo and can incur compute charges. No minimum-cost promise is made. `ignore_changes` on the secret value prevents the provider from treating a Key Vault-managed value as a desired plaintext secret.
+The workspace daily log quota is not a spending cap. One app replica is deliberately retained for a simple session-based demo and can incur compute charges. No minimum-cost promise is made. `secret` is a provider set, so Terraform cannot ignore only an indexed value. `ignore_changes = [secret]` delegates secret rotation to Key Vault and avoids plaintext-value drift. It also ignores secret reference/identity changes: changing the vault URI or identity requires explicitly reviewing/removing this lifecycle exclusion and reviewing the resulting plan. Never assume Terraform will detect secret-reference drift while this exclusion is present.
 
 ## Connectivity and migrations
 

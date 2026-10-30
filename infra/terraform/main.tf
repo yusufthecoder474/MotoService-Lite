@@ -114,5 +114,5 @@ resource "azurerm_container_app" "app" {
       }
     }
   }
-  lifecycle { ignore_changes = [secret[0].value] }
+  lifecycle { ignore_changes = [secret] }
 }
